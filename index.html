@@ -2,828 +2,173 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SID 2026 ?쇰Ц ?붿빟吏?/title>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>SID 2026 Paper Summaries</title>
     <style>
-        :root {
-            --bg: #f8fafc;
-            --sidebar-bg: #ffffff;
-            --primary: #2563eb;
-            --text: #1e293b;
-            --text-dim: #64748b;
-            --border: #e2e8f0;
-            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); display: flex; margin: 0; }
-        
-        nav {
-            width: 240px;
-            height: 100vh;
-            background: var(--sidebar-bg);
-            border-right: 1px solid var(--border);
-            position: fixed;
-            overflow-y: auto;
-            padding: 2rem 1rem;
-        }
-        nav h1 { font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 2rem; color: var(--primary); padding-left: 1rem; }
-        nav ul { list-style: none; padding: 0; }
-        nav li a {
-            display: block;
-            padding: 0.6rem 1rem;
-            color: var(--text-dim);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.2s;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        nav li a:hover { background: #f1f5f9; color: var(--primary); }
-        
-        main { flex: 1; margin-left: 240px; padding: 3rem; max-width: 1000px; }
-        .paper-section { margin-bottom: 4rem; scroll-margin-top: 2rem; }
-        .paper-card {
-            background: white;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            box-shadow: var(--card-shadow);
-        }
-        .card-header {
-            padding: 1.25rem 2rem;
-            background: #f8fafc;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .card-header h2 { margin: 0; font-family: 'Outfit', sans-serif; color: var(--text); font-size: 1.25rem; }
-        .card-content { padding: 2rem; }
-        
-        .prose h1 { font-size: 1.75rem; margin-bottom: 1.5rem; color: #0f172a; }
-        .prose h3 { color: var(--primary); margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.1rem; font-weight: 700; border-left: 4px solid var(--primary); padding-left: 0.75rem; }
-        .prose p { line-height: 1.7; margin-bottom: 1rem; color: #334155; }
-        .prose ul { padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc; }
-        .prose li { margin-bottom: 0.6rem; line-height: 1.6; color: #334155; }
-        .prose strong { color: #1e293b; font-weight: 700; }
-        
-        .btn { padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; border: none; transition: 0.2s; font-size: 0.85rem; }
-        .btn-copy { background: var(--primary); color: white; }
-        .btn-copy:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
-        
-        #toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background: #0f172a; color: white; padding: 0.8rem 2rem; border-radius: 12px; display: none; z-index: 100; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; max-width: 800px; margin: 0 auto; }
+        h1 { text-align: center; color: #444; }
+        p, li { line-height: 1.6; color: #555; }
+        h3 { color: #0056b3; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
     </style>
 </head>
 <body>
-    <nav>
-        <h1>SID 2026</h1>
-        <ul>
-            <li><a href='#section-13-1'>13-1</a></li><li><a href='#section-13-2'>13-2</a></li><li><a href='#section-13-3'>13-3</a></li><li><a href='#section-13-4'>13-4</a></li><li><a href='#section-20-1'>20-1</a></li><li><a href='#section-20-2'>20-2</a></li><li><a href='#section-20-3'>20-3</a></li><li><a href='#section-20-4'>20-4</a></li><li><a href='#section-44-1'>44-1</a></li><li><a href='#section-44-2'>44-2</a></li><li><a href='#section-44-3'>44-3</a></li><li><a href='#section-44-4'>44-4</a></li><li><a href='#section-56-1'>56-1</a></li><li><a href='#section-56-2'>56-2</a></li><li><a href='#section-56-4'>56-4</a></li><li><a href='#section-72-1'>72-1</a></li><li><a href='#section-72-2'>72-2</a></li><li><a href='#section-74-3'>74-3</a></li><li><a href='#section-91-1'>91-1</a></li><li><a href='#section-91-2'>91-2</a></li><li><a href='#section-91-3'>91-3</a></li><li><a href='#section-91-4'>91-4</a></li><li><a href='#section-98-1'>98-1</a></li><li><a href='#section-98-2'>98-2</a></li>
-        </ul>
-    </nav>
-    <main>
-            <section class="paper-section" id="section-13-1">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>13-1</h2>
-                <button class="btn btn-copy" onclick="copyText('content-13-1')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-13-1">
-                <h1>13-1.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>New OLED TDDI Driver IC Architecture</p>
-<h3>2. 저자</h3>
-<p>TsangChih WU, Huajun Zhuang</p>
-<h3>3. 소속</h3>
-<p>Display & Touch Department, Xiaomi Co.Ltd. Beijing, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>샤오미(Xiaomi)가 개발한 새로운 OLED TDDI(Touch and Display Driver Integration) 구동 IC 아키텍처를 소개하는 논문.</li>
-<li>기존 Dual RAM 구조에서 프레임 버퍼 SRAM을 제거하고 소스 드라이버를 MUX 1:1에서 MUX 1:2로 변경한 'Single RAM DDIC'를 기반으로 칩 면적(46% 감소)과 전력 소모를 크게 절감.</li>
-<li>터치 방식에 있어서는 베젤 축소 및 테스트 비용 증가 문제를 야기하는 Self-capacitance 방식 대신, 높은 SNR과 좁은 베젤 구현에 유리한 Mutual-capacitance 방식을 채택함.</li>
-<li>핵심 혁신인 <strong>Mux-in-IC</strong> 기술을 통해 기존 패널에 있던 MUX 아날로그 스위치 회로를 구동 IC 내부로 통합. 이로 인해 소스 앰프 수를 절반으로 줄여 전력을 최적화하고, 패널의 라우팅 공간을 확보하여 디스플레이 베젤을 약 200µm까지 축소시켰으며, 내장형 쉴딩을 통해 EMI 특성을 개선함.</li>
-<li>1.5K 해상도용 모듈의 원가 절감을 위해 40nm 공정을 채택, 칩 크기를 줄이면서 기존 분리형(DDIC+TP IC) 솔루션 대비 시스템 비용을 약 10% 절감하는 데 성공하여 대량 양산 기반을 마련함.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>세트업체의 부품 기술 내재화 및 주도권 위협:</strong> 스마트폰 세트업체인 샤오미가 직접 OLED 구동 IC 아키텍처(TDDI)를 설계하고 Mux-in-IC와 같은 핵심 특허를 바탕으로 칩-패널 공동 설계(co-design)를 주도하고 있습니다. 이는 패널 업체(삼성디스플레이)의 설계 주도권과 부품 생태계에 위협이 될 수 있습니다.</li>
-<li><strong>원가 및 베젤 경쟁력 검토 필요:</strong> 샤오미의 Single RAM 및 Mux-in-IC 통합 솔루션은 칩 크기 축소와 패널 측 베젤을 극단적으로 줄이면서 비용을 10% 절감하는 효과를 입증했습니다. 중가형 시장(1.5K 해상도)을 타겟으로 한 원가 절감형 TDDI 기술 트렌드로, 삼성디스플레이의 동급 패널 및 구동 IC 경쟁력과 비교 검토하고 대응 솔루션을 준비할 필요가 있습니다.</li>
-</ul>
-            </div>
+    <h1>SID 2026 ?쇰Ц ?붿빟吏?/h1>
+        <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 13-1</h2>
+        <button onclick="copyThis('content-13-1')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-13-1" style="margin-top: 15px;">
+            <h1>13-1.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>New OLED TDDI Driver IC Architecture</p><h3>2. ???TsangChih WU, Huajun Zhuang</h3><h3>3. ?뚯냽</h3><p>Display & Touch Department, Xiaomi Co.Ltd. Beijing, China</p><h3>4. 二쇱슂?댁슜</h3><li>?ㅼ삤誘?Xiaomi)媛 媛쒕컻???덈줈??OLED TDDI(Touch and Display Driver Integration) 援щ룞 IC ?꾪궎?띿쿂瑜??뚭컻?섎뒗 ?쇰Ц.</li><li>湲곗〈 Dual RAM 援ъ“?먯꽌 ?꾨젅??踰꾪띁 SRAM???쒓굅?섍퀬 ?뚯뒪 ?쒕씪?대쾭瑜?MUX 1:1?먯꽌 MUX 1:2濡?蹂寃쏀븳 'Single RAM DDIC'瑜?湲곕컲?쇰줈 移?硫댁쟻(46% 媛먯냼)怨??꾨젰 ?뚮え瑜??ш쾶 ?덇컧.</li><li>?곗튂 諛⑹떇???덉뼱?쒕뒗 踰좎젮 異뺤냼 諛??뚯뒪??鍮꾩슜 利앷? 臾몄젣瑜??쇨린?섎뒗 Self-capacitance 諛⑹떇 ??? ?믪? SNR怨?醫곸? 踰좎젮 援ы쁽???좊━??Mutual-capacitance 諛⑹떇??梨꾪깮??</li><li>?듭떖 ?곸떊??**Mux-in-IC** 湲곗닠???듯빐 湲곗〈 ?⑤꼸???덈뜕 MUX ?꾨궇濡쒓렇 ?ㅼ쐞移??뚮줈瑜?援щ룞 IC ?대?濡??듯빀. ?대줈 ?명빐 ?뚯뒪 ?고봽 ?섎? ?덈컲?쇰줈 以꾩뿬 ?꾨젰??理쒖쟻?뷀븯怨? ?⑤꼸???쇱슦??怨듦컙???뺣낫?섏뿬 ?붿뒪?뚮젅??踰좎젮????200쨉m源뚯? 異뺤냼?쒖섟?쇰ŉ, ?댁옣???대뵫???듯빐 EMI ?뱀꽦??媛쒖꽑??</li><li>1.5K ?댁긽?꾩슜 紐⑤뱢???먭? ?덇컧???꾪빐 40nm 怨듭젙??梨꾪깮, 移??ш린瑜?以꾩씠硫댁꽌 湲곗〈 遺꾨━??DDIC+TP IC) ?붾（???鍮??쒖뒪??鍮꾩슜????10% ?덇컧?섎뒗 ???깃났?섏뿬 ????묒궛 湲곕컲??留덈젴??</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?명듃?낆껜??遺??湲곗닠 ?댁옱??諛?二쇰룄沅??꾪삊:** ?ㅻ쭏?명룿 ?명듃?낆껜???ㅼ삤誘멸? 吏곸젒 OLED 援щ룞 IC ?꾪궎?띿쿂(TDDI)瑜??ㅺ퀎?섍퀬 Mux-in-IC? 媛숈? ?듭떖 ?뱁뿀瑜?諛뷀깢?쇰줈 移??⑤꼸 怨듬룞 ?ㅺ퀎(co-design)瑜?二쇰룄?섍퀬 ?덉뒿?덈떎. ?대뒗 ?⑤꼸 ?낆껜(?쇱꽦?붿뒪?뚮젅?????ㅺ퀎 二쇰룄沅뚭낵 遺???앺깭怨꾩뿉 ?꾪삊???????덉뒿?덈떎.</li><li>**?먭? 諛?踰좎젮 寃쎌웳??寃???꾩슂:** ?ㅼ삤誘몄쓽 Single RAM 諛?Mux-in-IC ?듯빀 ?붾（?섏? 移??ш린 異뺤냼? ?⑤꼸 痢?踰좎젮??洹밸떒?곸쑝濡?以꾩씠硫댁꽌 鍮꾩슜??10% ?덇컧?섎뒗 ?④낵瑜??낆쬆?덉뒿?덈떎. 以묎????쒖옣(1.5K ?댁긽?????寃잛쑝濡????먭? ?덇컧??TDDI 湲곗닠 ?몃젋?쒕줈, ?쇱꽦?붿뒪?뚮젅?댁쓽 ?숆툒 ?⑤꼸 諛?援щ룞 IC 寃쎌웳?κ낵 鍮꾧탳 寃?좏븯怨?????붾（?섏쓣 以鍮꾪븷 ?꾩슂媛 ?덉뒿?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-13-2">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>13-2</h2>
-                <button class="btn btn-copy" onclick="copyText('content-13-2')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-13-2">
-                <h1>13-2.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Development of Low-Cost, Low-Power Consumption, and Narrow-Frame IGZO Panels for IT (MFD＆DeMUX)</p>
-<h3>2. 저자</h3>
-<p>Tatsuya Kawasaki, Masafumi Sugino, Yohei Takeuchi, Kengo Hara, Kohji Saitoh, Satoshi Horiuchi, Daiji Kitagawa, Tetsuo Kikuchi, Hajime Imai, Tohru Daitoh</p>
-<h3>3. 소속</h3>
-<p>Sharp Display Technology Corporation, Mie, Japan</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>Sharp가 IT용 패널(노트북 등)을 위해 개발한 저비용, 저전력, 초슬림 베젤 IGZO 패널 기술을 소개합니다.</li>
-<li><strong>MFD (Multi-Frequency Display) 기술:</strong> 화면 전체를 동일한 주사율로 구동하는 기존 방식과 달리, 화면을 동영상 영역과 정지 영상 영역으로 분할합니다. 동영상은 높은 주사율(예: 120Hz)로, 정지 영상은 낮은 주사율(예: 8Hz)로 구동하여 영상 품질은 유지하면서 전력 소모를 상황에 따라 36%에서 최대 55%까지 감소시켰습니다.</li>
-<li><strong>DeMUX (De-multiplexer) 기술:</strong> BCE 구조의 IGZO-TFT를 사용하여 소스 드라이버 IC 수를 줄였습니다. 기존 Dual Gate(DG) 방식과 비교하여 투과율 저하나 GIP 회로 폭 증가 없이 소스 드라이버 개수를 반으로 줄여 원가를 절감합니다.</li>
-<li>MFD와 DeMUX 기술의 성공적인 결합을 통해, 패널의 좌우 베젤 폭을 2mm 미만으로 얇게 유지하면서도 소스 드라이버 IC를 절감하고 전력을 최소화하는 데 성공했으며, 이를 적용한 PC용 프로토타입 시연을 완료했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>IT용 패널에서의 전력 및 원가 혁신:</strong> IGZO(산화물) TFT 기반의 화면 분할 다중 주사율 구동(MFD)과 소스 드라이버 수를 절반으로 줄이는 DeMUX 기술의 결합은 노트북, 태블릿 등 IT용 디스플레이 시장에서 원가 경쟁력과 배터리 수명을 극적으로 개선하는 핵심 무기가 될 수 있습니다.</li>
-<li><strong>벤치마킹 및 대응 필요:</strong> Sharp가 LCD 기반으로 개발한 기술이나, OLED 영역에서도 이와 유사한 다중 주사율/다중 구동 방식(원가 절감 및 폼팩터 개선)이 적용될 수 있습니다. 특히 폼팩터(초슬림 베젤)를 포기하지 않으면서 부품을 저감한 것은 훌륭한 성과이므로, 삼성디스플레이의 IT용 패널(특히 OLED) 기술 로드맵에 맞추어 경쟁 업체의 원가/전력/베젤 최적화 방식에 대한 면밀한 벤치마킹과 대응 기술 검토가 필요합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 13-2</h2>
+        <button onclick="copyThis('content-13-2')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-13-2" style="margin-top: 15px;">
+            <h1>13-2.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Development of Low-Cost, Low-Power Consumption, and Narrow-Frame IGZO Panels for IT (MFD竊낪eMUX)</p><h3>2. ???Tatsuya Kawasaki, Masafumi Sugino, Yohei Takeuchi, Kengo Hara, Kohji Saitoh, Satoshi Horiuchi, Daiji Kitagawa, Tetsuo Kikuchi, Hajime Imai, Tohru Daitoh</h3><h3>3. ?뚯냽</h3><p>Sharp Display Technology Corporation, Mie, Japan</p><h3>4. 二쇱슂?댁슜</h3><li>Sharp媛 IT???⑤꼸(?명듃遺??????꾪빐 媛쒕컻???鍮꾩슜, ??꾨젰, 珥덉뒳由?踰좎젮 IGZO ?⑤꼸 湲곗닠???뚭컻?⑸땲??</li><li>**MFD (Multi-Frequency Display) 湲곗닠:** ?붾㈃ ?꾩껜瑜??숈씪??二쇱궗?⑤줈 援щ룞?섎뒗 湲곗〈 諛⑹떇怨??щ━, ?붾㈃???숈쁺???곸뿭怨??뺤? ?곸긽 ?곸뿭?쇰줈 遺꾪븷?⑸땲?? ?숈쁺?곸? ?믪? 二쇱궗???? 120Hz)濡? ?뺤? ?곸긽? ??? 二쇱궗???? 8Hz)濡?援щ룞?섏뿬 ?곸긽 ?덉쭏? ?좎??섎㈃???꾨젰 ?뚮え瑜??곹솴???곕씪 36%?먯꽌 理쒕? 55%源뚯? 媛먯냼?쒖섟?듬땲??</li><li>**DeMUX (De-multiplexer) 湲곗닠:** BCE 援ъ“??IGZO-TFT瑜??ъ슜?섏뿬 ?뚯뒪 ?쒕씪?대쾭 IC ?섎? 以꾩??듬땲?? 湲곗〈 Dual Gate(DG) 諛⑹떇怨?鍮꾧탳?섏뿬 ?ш낵????섎굹 GIP ?뚮줈 ??利앷? ?놁씠 ?뚯뒪 ?쒕씪?대쾭 媛쒖닔瑜?諛섏쑝濡?以꾩뿬 ?먭?瑜??덇컧?⑸땲??</li><li>MFD? DeMUX 湲곗닠???깃났?곸씤 寃고빀???듯빐, ?⑤꼸??醫뚯슦 踰좎젮 ??쓣 2mm 誘몃쭔?쇰줈 ?뉕쾶 ?좎??섎㈃?쒕룄 ?뚯뒪 ?쒕씪?대쾭 IC瑜??덇컧?섍퀬 ?꾨젰??理쒖냼?뷀븯?????깃났?덉쑝硫? ?대? ?곸슜??PC???꾨줈?좏????쒖뿰???꾨즺?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**IT???⑤꼸?먯꽌???꾨젰 諛??먭? ?곸떊:** IGZO(?고솕臾? TFT 湲곕컲???붾㈃ 遺꾪븷 ?ㅼ쨷 二쇱궗??援щ룞(MFD)怨??뚯뒪 ?쒕씪?대쾭 ?섎? ?덈컲?쇰줈 以꾩씠??DeMUX 湲곗닠??寃고빀? ?명듃遺? ?쒕툝由???IT???붿뒪?뚮젅???쒖옣?먯꽌 ?먭? 寃쎌웳?κ낵 諛고꽣由??섎챸??洹뱀쟻?쇰줈 媛쒖꽑?섎뒗 ?듭떖 臾닿린媛 ?????덉뒿?덈떎.</li><li>**踰ㅼ튂留덊궧 諛?????꾩슂:** Sharp媛 LCD 湲곕컲?쇰줈 媛쒕컻??湲곗닠?대굹, OLED ?곸뿭?먯꽌???댁? ?좎궗???ㅼ쨷 二쇱궗???ㅼ쨷 援щ룞 諛⑹떇(?먭? ?덇컧 諛??쇳뙥??媛쒖꽑)???곸슜?????덉뒿?덈떎. ?뱁엳 ?쇳뙥??珥덉뒳由?踰좎젮)瑜??ш린?섏? ?딆쑝硫댁꽌 遺?덉쓣 ?媛먰븳 寃껋? ?뚮????깃낵?대?濡? ?쇱꽦?붿뒪?뚮젅?댁쓽 IT???⑤꼸(?뱁엳 OLED) 湲곗닠 濡쒕뱶留듭뿉 留욎텛??寃쎌웳 ?낆껜???먭?/?꾨젰/踰좎젮 理쒖쟻??諛⑹떇?????硫대???踰ㅼ튂留덊궧怨????湲곗닠 寃?좉? ?꾩슂?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-13-3">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>13-3</h2>
-                <button class="btn btn-copy" onclick="copyText('content-13-3')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-13-3">
-                <h1>13-3.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Seamless Switching Technology of Pixel Clock on AMOLED Notebook Display</p>
-<h3>2. 저자</h3>
-<p>Zhong-Jie Wang, Chun-Cheng Guo, Xiao-Xu Li, Shuai Hou, Chun-Li Wei, Bin Zhang</p>
-<h3>3. 소속</h3>
-<p>Chengdu BOE Optoelectronics Technology Co., Ltd., Chengdu, Sichuan, China</p>
-<p>Analogix (Suzhou) Semiconductor Co., Ltd., Suzhou, Jiangsu, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>BOE가 TCON 업체 Analogix와 협력하여 세계 최초로 노트북용 AMOLED 디스플레이에서 사용자가 인지하지 못할 수준의 '심리스(끊김 없는) 픽셀 클럭 스위칭 기술'을 상용화 수준으로 제안한 논문입니다.</li>
-<li><strong>문제 인식:</strong> 기존 LCD 노트북에 널리 쓰이는 주사율 전환 기술(SPRS, long_H 방식)을 OLED에 그대로 적용하면, 주사율 변환 시 픽셀 충전 시간이 달라지고 패널 보상 IP(De-Mura 등)를 온전히 적용할 수 없어 화면 깜빡임(flicker)이나 찢어짐(tearing), 블랙아웃 등의 심각한 문제가 발생합니다.</li>
-<li><strong>해결 방안 제안 (Combine_H&V):</strong> 기존 OLED 노트북의 long_V 방식과 LCD의 long_H 방식을 혼합한 하이브리드 솔루션을 제안했습니다. TCON에 SPRS 임시 버퍼를 추가로 탑재하여, GPU가 eDP 인터페이스를 통해 저속 픽셀 클럭(주사율 감소)으로 데이터를 보내면 RX에서 이를 버퍼에 저장하고, 패널 내부 구동(TX)은 기존의 높은 픽셀 클럭(144Hz 등)을 그대로 유지하며 데이터를 갱신합니다.</li>
-<li><strong>결과:</strong> 이를 통해 화면 깜빡임이나 화질 저하 없이 eDP 대역폭 감소에 따른 로직 소비 전력을 60Hz 구동 기준 약 102mW(총 전력의 약 5.3%) 절감했으며, GPU 측(Source end) 전력 절감까지 합하면 전체 시스템 기준 약 200mW의 배터리 효율 향상을 달성했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>경쟁사의 IT용 OLED 저전력 구동 기술 고도화:</strong> BOE가 팹리스 생태계(Analogix)와 협력하여 OLED 노트북의 약점이었던 자연스러운 동적 주사율 전환 및 그에 따른 전력 소모 개선을 훌륭하게 해결한 사례로, 상당한 기술적 위협이 됩니다.</li>
-<li><strong>시스템 레벨의 협력 및 대응 검토 필요:</strong> TCON 내부에 추가 버퍼를 두고 GPU의 eDP 전송 속도 가변화에 능동적으로 대응하는 이 솔루션은 IT 제품의 핵심 구매 요인인 '배터리 타임 확보'에 직결됩니다. 삼성디스플레이 역시 TCON, GPU, CPU 등 생태계 파트너들과의 협업을 통해 주사율 변환 시 화질 저하가 없는 심리스 구동 최적화 기술에 대한 대비 및 고도화가 요구됩니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 13-3</h2>
+        <button onclick="copyThis('content-13-3')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-13-3" style="margin-top: 15px;">
+            <h1>13-3.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Seamless Switching Technology of Pixel Clock on AMOLED Notebook Display</p><h3>2. ???Zhong-Jie Wang, Chun-Cheng Guo, Xiao-Xu Li, Shuai Hou, Chun-Li Wei, Bin Zhang</h3><h3>3. ?뚯냽</h3><p>Chengdu BOE Optoelectronics Technology Co., Ltd., Chengdu, Sichuan, China</p><p>Analogix (Suzhou) Semiconductor Co., Ltd., Suzhou, Jiangsu, China</p><h3>4. 二쇱슂?댁슜</h3><li>BOE媛 TCON ?낆껜 Analogix? ?묐젰?섏뿬 ?멸퀎 理쒖큹濡??명듃遺곸슜 AMOLED ?붿뒪?뚮젅?댁뿉???ъ슜?먭? ?몄??섏? 紐삵븷 ?섏???'?щ━???딄? ?녿뒗) ?쎌? ?대윮 ?ㅼ쐞移?湲곗닠'???곸슜???섏??쇰줈 ?쒖븞???쇰Ц?낅땲??</li><li>**臾몄젣 ?몄떇:** 湲곗〈 LCD ?명듃遺곸뿉 ?먮━ ?곗씠??二쇱궗???꾪솚 湲곗닠(SPRS, long_H 諛⑹떇)??OLED??洹몃?濡??곸슜?섎㈃, 二쇱궗??蹂?????쎌? 異⑹쟾 ?쒓컙???щ씪吏怨??⑤꼸 蹂댁긽 IP(De-Mura ??瑜??⑥쟾???곸슜?????놁뼱 ?붾㈃ 源쒕묀??flicker)?대굹 李?뼱吏?tearing), 釉붾옓?꾩썐 ?깆쓽 ?ш컖??臾몄젣媛 諛쒖깮?⑸땲??</li><li>**?닿껐 諛⑹븞 ?쒖븞 (Combine_H&V):** 湲곗〈 OLED ?명듃遺곸쓽 long_V 諛⑹떇怨?LCD??long_H 諛⑹떇???쇳빀???섏씠釉뚮━???붾（?섏쓣 ?쒖븞?덉뒿?덈떎. TCON??SPRS ?꾩떆 踰꾪띁瑜?異붽?濡??묒옱?섏뿬, GPU媛 eDP ?명꽣?섏씠?ㅻ? ?듯빐 ????쎌? ?대윮(二쇱궗??媛먯냼)?쇰줈 ?곗씠?곕? 蹂대궡硫?RX?먯꽌 ?대? 踰꾪띁????ν븯怨? ?⑤꼸 ?대? 援щ룞(TX)? 湲곗〈???믪? ?쎌? ?대윮(144Hz ????洹몃?濡??좎??섎ŉ ?곗씠?곕? 媛깆떊?⑸땲??</li><li>**寃곌낵:** ?대? ?듯빐 ?붾㈃ 源쒕묀?꾩씠???붿쭏 ????놁씠 eDP ???룺 媛먯냼???곕Ⅸ 濡쒖쭅 ?뚮퉬 ?꾨젰??60Hz 援щ룞 湲곗? ??102mW(珥??꾨젰????5.3%) ?덇컧?덉쑝硫? GPU 痢?Source end) ?꾨젰 ?덇컧源뚯? ?⑺븯硫??꾩껜 ?쒖뒪??湲곗? ??200mW??諛고꽣由??⑥쑉 ?μ긽???ъ꽦?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**寃쎌웳?ъ쓽 IT??OLED ??꾨젰 援щ룞 湲곗닠 怨좊룄??** BOE媛 ?밸━???앺깭怨?Analogix)? ?묐젰?섏뿬 OLED ?명듃遺곸쓽 ?쎌젏?댁뿀???먯뿰?ㅻ윭???숈쟻 二쇱궗???꾪솚 諛?洹몄뿉 ?곕Ⅸ ?꾨젰 ?뚮え 媛쒖꽑???뚮??섍쾶 ?닿껐???щ?濡? ?곷떦??湲곗닠???꾪삊???⑸땲??</li><li>**?쒖뒪???덈꺼???묐젰 諛????寃???꾩슂:** TCON ?대???異붽? 踰꾪띁瑜??먭퀬 GPU??eDP ?꾩넚 ?띾룄 媛蹂?붿뿉 ?λ룞?곸쑝濡???묓븯?????붾（?섏? IT ?쒗뭹???듭떖 援щℓ ?붿씤??'諛고꽣由?????뺣낫'??吏곴껐?⑸땲?? ?쇱꽦?붿뒪?뚮젅????떆 TCON, GPU, CPU ???앺깭怨??뚰듃?덈뱾怨쇱쓽 ?묒뾽???듯빐 二쇱궗??蹂?????붿쭏 ??섍? ?녿뒗 ?щ━??援щ룞 理쒖쟻??湲곗닠??????鍮?諛?怨좊룄?붽? ?붽뎄?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-13-4">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>13-4</h2>
-                <button class="btn btn-copy" onclick="copyText('content-13-4')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-13-4">
-                <h1>13-4.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>A High-Refresh Rate and Large-Size OLED Display with DRD Gate Driver for Premium TVs</p>
-<h3>2. 저자</h3>
-<p>Hong-Jae Shin, Yong-Ho Kim, Jae-Yi Choi, Hyun-Haeng Lee, Chang-Hoon Lee, Dong-Kyu Yang, Sung-Joon Bae, Tae-Lim Lee, Woo-Sup Shin, Hyeon-Woo Lee</p>
-<h3>3. 소속</h3>
-<p>Large Display Business Unit, LG Display, Paju, Korea</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>LG Display에서 프리미엄 TV를 위한 고주사율, 대형 OLED 디스플레이 패널(65인치 4K 해상도) 아키텍처 기술을 소개합니다.</li>
-<li><strong>핵심 기술 적용:</strong> DRD(Double-Rate Driving) 방식과 듀얼 게이트(Dual-gate) 픽셀 구조, 그리고 면적을 대폭 줄인 패널 내장 게이트 드라이버(Small-area GIP) 기술을 결합했습니다.</li>
-<li>DRD 구동을 통해 데이터 드라이버 IC 개수를 기존 16개에서 8개로 정확히 절반으로 줄여 시스템 복잡도와 부품 원가를 크게 절감했습니다.</li>
-<li>통상적으로 DRD를 적용하면 픽셀 충전 시간이 줄어들어 고주사율 구동이 어렵고 게이트 라인이 두 배로 늘어나 베젤이 커지지만, 듀얼 게이트 구조 최적화와 과구동(over-driving)을 통해 165Hz의 고주사율에서도 80% 이상의 충분한 픽셀 충전률을 달성했습니다.</li>
-<li>또한, 추가 마스크 공정 없이 GIP 회로 배치를 최적화하여 게이트 드라이버 설계 면적을 약 50% 축소시킴으로써 패널 베젤 폭을 4.3mm 수준으로 초슬림하게 유지하는 데 성공했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>경쟁사의 대형 TV 패널 원가 절감 및 폼팩터 기술 위협:</strong> 경쟁사인 LG디스플레이가 WOLED 프리미엄 TV 패널 라인업에서 부품 원가를 절반(드라이버 IC 축소)으로 낮추는 동시에 165Hz 고성능 주사율과 초슬림 베젤까지 모두 구현한 것은 시장에서 가격/성능 우위를 점할 수 있는 매우 위협적인 기술입니다.</li>
-<li><strong>대형 패널 DRD 기술 벤치마킹 필요:</strong> 삼성디스플레이의 QD-OLED TV 패널 라인업에서도 원가 경쟁력 강화를 위해 데이터 IC를 줄이는 구동 기술(DRD 등) 적용에 따른 베젤 팽창 문제 및 충전 시간 부족 문제를 어떻게 해결할 것인지에 대한 내부 검토와 기술적 우위 선점이 강력히 요구됩니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 13-4</h2>
+        <button onclick="copyThis('content-13-4')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-13-4" style="margin-top: 15px;">
+            <h1>13-4.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>A High-Refresh Rate and Large-Size OLED Display with DRD Gate Driver for Premium TVs</p><h3>2. ???Hong-Jae Shin, Yong-Ho Kim, Jae-Yi Choi, Hyun-Haeng Lee, Chang-Hoon Lee, Dong-Kyu Yang, Sung-Joon Bae, Tae-Lim Lee, Woo-Sup Shin, Hyeon-Woo Lee</h3><h3>3. ?뚯냽</h3><p>Large Display Business Unit, LG Display, Paju, Korea</p><h3>4. 二쇱슂?댁슜</h3><li>LG Display?먯꽌 ?꾨━誘몄뾼 TV瑜??꾪븳 怨좎＜?ъ쑉, ???OLED ?붿뒪?뚮젅???⑤꼸(65?몄튂 4K ?댁긽?? ?꾪궎?띿쿂 湲곗닠???뚭컻?⑸땲??</li><li>**?듭떖 湲곗닠 ?곸슜:** DRD(Double-Rate Driving) 諛⑹떇怨????寃뚯씠??Dual-gate) ?쎌? 援ъ“, 洹몃━怨?硫댁쟻?????以꾩씤 ?⑤꼸 ?댁옣 寃뚯씠???쒕씪?대쾭(Small-area GIP) 湲곗닠??寃고빀?덉뒿?덈떎.</li><li>DRD 援щ룞???듯빐 ?곗씠???쒕씪?대쾭 IC 媛쒖닔瑜?湲곗〈 16媛쒖뿉??8媛쒕줈 ?뺥솗???덈컲?쇰줈 以꾩뿬 ?쒖뒪??蹂듭옟?꾩? 遺???먭?瑜??ш쾶 ?덇컧?덉뒿?덈떎.</li><li>?듭긽?곸쑝濡?DRD瑜??곸슜?섎㈃ ?쎌? 異⑹쟾 ?쒓컙??以꾩뼱?ㅼ뼱 怨좎＜?ъ쑉 援щ룞???대졄怨?寃뚯씠???쇱씤????諛곕줈 ?섏뼱??踰좎젮??而ㅼ?吏留? ???寃뚯씠??援ъ“ 理쒖쟻?붿? 怨쇨뎄??over-driving)???듯빐 165Hz??怨좎＜?ъ쑉?먯꽌??80% ?댁긽??異⑸텇???쎌? 異⑹쟾瑜좎쓣 ?ъ꽦?덉뒿?덈떎.</li><li>?먰븳, 異붽? 留덉뒪??怨듭젙 ?놁씠 GIP ?뚮줈 諛곗튂瑜?理쒖쟻?뷀븯??寃뚯씠???쒕씪?대쾭 ?ㅺ퀎 硫댁쟻????50% 異뺤냼?쒗궡?쇰줈???⑤꼸 踰좎젮 ??쓣 4.3mm ?섏??쇰줈 珥덉뒳由쇳븯寃??좎??섎뒗 ???깃났?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**寃쎌웳?ъ쓽 ???TV ?⑤꼸 ?먭? ?덇컧 諛??쇳뙥??湲곗닠 ?꾪삊:** 寃쎌웳?ъ씤 LG?붿뒪?뚮젅?닿? WOLED ?꾨━誘몄뾼 TV ?⑤꼸 ?쇱씤?낆뿉??遺???먭?瑜??덈컲(?쒕씪?대쾭 IC 異뺤냼)?쇰줈 ??텛???숈떆??165Hz 怨좎꽦??二쇱궗?④낵 珥덉뒳由?踰좎젮源뚯? 紐⑤몢 援ы쁽??寃껋? ?쒖옣?먯꽌 媛寃??깅뒫 ?곗쐞瑜??먰븷 ???덈뒗 留ㅼ슦 ?꾪삊?곸씤 湲곗닠?낅땲??</li><li>**????⑤꼸 DRD 湲곗닠 踰ㅼ튂留덊궧 ?꾩슂:** ?쇱꽦?붿뒪?뚮젅?댁쓽 QD-OLED TV ?⑤꼸 ?쇱씤?낆뿉?쒕룄 ?먭? 寃쎌웳??媛뺥솕瑜??꾪빐 ?곗씠??IC瑜?以꾩씠??援щ룞 湲곗닠(DRD ?? ?곸슜???곕Ⅸ 踰좎젮 ?쎌갹 臾몄젣 諛?異⑹쟾 ?쒓컙 遺議?臾몄젣瑜??대뼸寃??닿껐??寃껋씤吏??????대? 寃?좎? 湲곗닠???곗쐞 ?좎젏??媛뺣젰???붽뎄?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-20-1">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>20-1</h2>
-                <button class="btn btn-copy" onclick="copyText('content-20-1')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-20-1">
-                <h1>20-1.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Advancing AR/VR: Innovative Strategies for Future Display Solutions</p>
-<h3>2. 저자</h3>
-<p>Sug Woo Jung, Sangho Park, Sang-Myeon HAN, JAE BEOM CHOI</p>
-<h3>3. 소속</h3>
-<p>Samsung Display Co. Ltd., Yongin-si, Republic of Korea</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>삼성디스플레이에서 AR/VR 기기용 차세대 마이크로디스플레이인 OLEDoS(OLED-on-Silicon) 기술의 발전 전략과 혁신적 성과를 다룬 논문입니다.</li>
-<li>기존에 상용화된 백색 OLED와 컬러 필터를 결합한(WOLED-CF) 방식은 밝기와 해상도 확장에 한계가 있음을 지적하고, 서브 마이크론 수준의 초미세 정렬이 가능한 FSM(Fine Silicon Mask) 기술을 도입하여 직접 패터닝하는 RGB OLEDoS 기술의 우수성을 강조합니다.</li>
-<li>특히 고밀도 픽셀에서 발생하는 누설 전류를 차단하는 픽셀 구조 개선, ITO 기반의 다층 전극 엔지니어링, 광학 공진기(Optical-cavity) 튜닝 및 마이크로렌즈 어레이(MLA)를 통합한 광 추출 효율 향상 기술을 상세히 소개합니다.</li>
-<li>이러한 기술적 도약을 통해 RGB OLEDoS는 초고해상도(High-PPI)와 압도적인 밝기(High-ACR)를 동시에 달성하여, 기존 VR 기기를 넘어 고휘도 요구조건이 극히 까다로운 AR 스마트 글래스 등 차세대 혼합현실 기기의 궁극적인 디스플레이 플랫폼으로 확장이 가능함을 입증했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>자사 주도 기술의 우위 확인 및 상용화 가속화 필요:</strong> 이 논문은 삼성디스플레이 내부 연구진이 직접 작성한 것으로, 차세대 OLEDoS 기술 로드맵의 핵심이 'FSM 기반의 직접 패터닝 RGB OLEDoS'에 있음을 보여줍니다. 이는 경쟁 위협이라기보다는 자사가 나아갈 방향성을 대외적으로 선언한 것입니다.</li>
-<li><strong>초격차 기술 완성도 점검:</strong> 경쟁사들이 WOLED-CF OLEDoS 또는 저가형 Glass-OLED로 추격하는 상황에서, 논문에서 제시된 마이크로캐비티 최적화, MLA 결합, 누설 전류 억제 등 핵심 공정 기술들의 양산성 확보와 조기 상용화가 미래 AR/VR 마이크로디스플레이 시장(특히 마이크로LED와의 경쟁)에서 주도권을 쥐는 핵심 관건이므로 지속적인 내재화 점검이 필요합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 20-1</h2>
+        <button onclick="copyThis('content-20-1')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-20-1" style="margin-top: 15px;">
+            <h1>20-1.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Advancing AR/VR: Innovative Strategies for Future Display Solutions</p><h3>2. ???Sug Woo Jung, Sangho Park, Sang-Myeon HAN, JAE BEOM CHOI</h3><h3>3. ?뚯냽</h3><p>Samsung Display Co. Ltd., Yongin-si, Republic of Korea</p><h3>4. 二쇱슂?댁슜</h3><li>?쇱꽦?붿뒪?뚮젅?댁뿉??AR/VR 湲곌린??李⑥꽭? 留덉씠?щ줈?붿뒪?뚮젅?댁씤 OLEDoS(OLED-on-Silicon) 湲곗닠??諛쒖쟾 ?꾨왂怨??곸떊???깃낵瑜??ㅻ， ?쇰Ц?낅땲??</li><li>湲곗〈???곸슜?붾맂 諛깆깋 OLED? 而щ윭 ?꾪꽣瑜?寃고빀??WOLED-CF) 諛⑹떇? 諛앷린? ?댁긽???뺤옣???쒓퀎媛 ?덉쓬??吏?곹븯怨? ?쒕툕 留덉씠?щ줎 ?섏???珥덈????뺣젹??媛?ν븳 FSM(Fine Silicon Mask) 湲곗닠???꾩엯?섏뿬 吏곸젒 ?⑦꽣?앺븯??RGB OLEDoS 湲곗닠???곗닔?깆쓣 媛뺤“?⑸땲??</li><li>?뱁엳 怨좊????쎌??먯꽌 諛쒖깮?섎뒗 ?꾩꽕 ?꾨쪟瑜?李⑤떒?섎뒗 ?쎌? 援ъ“ 媛쒖꽑, ITO 湲곕컲???ㅼ링 ?꾧레 ?붿??덉뼱留? 愿묓븰 怨듭쭊湲?Optical-cavity) ?쒕떇 諛?留덉씠?щ줈?뚯쫰 ?대젅??MLA)瑜??듯빀??愿?異붿텧 ?⑥쑉 ?μ긽 湲곗닠???곸꽭???뚭컻?⑸땲??</li><li>?대윭??湲곗닠???꾩빟???듯빐 RGB OLEDoS??珥덇퀬?댁긽??High-PPI)? ?뺣룄?곸씤 諛앷린(High-ACR)瑜??숈떆???ъ꽦?섏뿬, 湲곗〈 VR 湲곌린瑜??섏뼱 怨좏쐶???붽뎄議곌굔??洹뱁엳 源뚮떎濡쒖슫 AR ?ㅻ쭏??湲?섏뒪 ??李⑥꽭? ?쇳빀?꾩떎 湲곌린??沅곴레?곸씤 ?붿뒪?뚮젅???뚮옯?쇱쑝濡??뺤옣??媛?ν븿???낆쬆?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?먯궗 二쇰룄 湲곗닠???곗쐞 ?뺤씤 諛??곸슜??媛?랁솕 ?꾩슂:** ???쇰Ц? ?쇱꽦?붿뒪?뚮젅???대? ?곌뎄吏꾩씠 吏곸젒 ?묒꽦??寃껋쑝濡? 李⑥꽭? OLEDoS 湲곗닠 濡쒕뱶留듭쓽 ?듭떖??'FSM 湲곕컲??吏곸젒 ?⑦꽣??RGB OLEDoS'???덉쓬??蹂댁뿬以띾땲?? ?대뒗 寃쎌웳 ?꾪삊?대씪湲곕낫?ㅻ뒗 ?먯궗媛 ?섏븘媛?諛⑺뼢?깆쓣 ??몄쟻?쇰줈 ?좎뼵??寃껋엯?덈떎.</li><li>**珥덇꺽李?湲곗닠 ?꾩꽦???먭?:** 寃쎌웳?щ뱾??WOLED-CF OLEDoS ?먮뒗 ?媛??Glass-OLED濡?異붽꺽?섎뒗 ?곹솴?먯꽌, ?쇰Ц?먯꽌 ?쒖떆??留덉씠?щ줈罹먮퉬??理쒖쟻?? MLA 寃고빀, ?꾩꽕 ?꾨쪟 ?듭젣 ???듭떖 怨듭젙 湲곗닠?ㅼ쓽 ?묒궛???뺣낫? 議곌린 ?곸슜?붽? 誘몃옒 AR/VR 留덉씠?щ줈?붿뒪?뚮젅???쒖옣(?뱁엳 留덉씠?щ줈LED???寃쎌웳)?먯꽌 二쇰룄沅뚯쓣 伊먮뒗 ?듭떖 愿嫄댁씠誘濡?吏?띿쟻???댁옱???먭????꾩슂?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-20-2">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>20-2</h2>
-                <button class="btn btn-copy" onclick="copyText('content-20-2')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-20-2">
-                <h1>20-2.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>A 1512 PPI Real RGB Glassed-OLED Display for VR</p>
-<h3>2. 저자</h3>
-<p>Rongjuan Yang, Hefang Liu, Liangshuang Miao, Tingbin Zhang, Tianhong Wang, Haofeng Zhang, Jiangbo Yao, Jianfeng Yuan, Zhifu Li, Bin Zhao</p>
-<h3>3. 소속</h3>
-<p>Shenzhen China Star Optoelectronics Semiconductor Display Technology Co. Ltd (CSOT) 등</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 패널 업체 TCL CSOT가 기존 실리콘 웨이퍼 대신 유리기판을 사용하여 1512 PPI에 달하는 초고해상도 Real RGB OLED (G-OLED) 디스플레이를 세계 최초로 시연하고 핵심 제조 기술을 공개한 논문입니다.</li>
-<li><strong>해결 과제와 혁신 기술:</strong> 유리기판 위에서 이 정도의 고밀도 화소를 구현하기 위해 발생하는 미세 금속 배선의 단락 위험, 다층 박막 간의 응력(stress) 차이로 인한 박리 현상, 그리고 복잡한 단차에 따른 평탄도 문제를 해결하기 위한 통합 공정 전략을 제안했습니다.</li>
-<li>구체적으로 ACD OPC 보상 기술 도입, 포토리소그래피 노광/에칭 공정의 협업 최적화, 박막 증착 조건 및 내부 응력 튜닝, AA 영역 내 능동적 평탄화(trench filling) 공정 등을 적용했습니다.</li>
-<li>이를 통해 2.56인치 크기에서 2560 × 2740(1512 PPI)의 초고해상도, 1,000,000:1의 명암비, 120Hz 주사율 및 낮은 전력 소모를 달성하였으며, 실리콘 기반 마이크로 OLED(OLEDoS)의 가장 큰 약점인 '높은 제조 원가'를 근본적으로 회피하는 방안을 제시했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>Glass-based OLED 기반 고해상도 구현은 매우 강력한 위협:</strong> 중국 CSOT가 기존 LCD나 저해상도 OLED 라인에 쓰이는 유리기판 공정을 끌어올려 무려 1500 PPI급 Real RGB를 양산 가능 수준으로 끌어올렸다는 것은 비용에 민감한 대중적인 VR 기기 시장에서 OLEDoS를 강력하게 대체할 수 있는 무기입니다.</li>
-<li><strong>적극적 벤치마킹 및 대안 모색 시급:</strong> 하이엔드는 OLEDoS로 가더라도 볼륨(Mass) 시장에서는 이러한 고해상도 Glass OLED가 주력이 될 가능성이 높습니다. 삼성디스플레이 역시 유리기판 기반의 FMM 공정 한계 돌파 기술(초정밀 마스크, 노광/식각 공정 결합 등)에 대한 선행 연구 성과를 철저히 분석하고 벤치마킹하여 중저가형 VR 디스플레이 로드맵 방어 전략을 마련해야 합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 20-2</h2>
+        <button onclick="copyThis('content-20-2')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-20-2" style="margin-top: 15px;">
+            <h1>20-2.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>A 1512 PPI Real RGB Glassed-OLED Display for VR</p><h3>2. ???Rongjuan Yang, Hefang Liu, Liangshuang Miao, Tingbin Zhang, Tianhong Wang, Haofeng Zhang, Jiangbo Yao, Jianfeng Yuan, Zhifu Li, Bin Zhao</h3><h3>3. ?뚯냽</h3><p>Shenzhen China Star Optoelectronics Semiconductor Display Technology Co. Ltd (CSOT) ??</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 ?⑤꼸 ?낆껜 TCL CSOT媛 湲곗〈 ?ㅻ━肄??⑥씠??????좊━湲고뙋???ъ슜?섏뿬 1512 PPI???ы븯??珥덇퀬?댁긽??Real RGB OLED (G-OLED) ?붿뒪?뚮젅?대? ?멸퀎 理쒖큹濡??쒖뿰?섍퀬 ?듭떖 ?쒖“ 湲곗닠??怨듦컻???쇰Ц?낅땲??</li><li>**?닿껐 怨쇱젣? ?곸떊 湲곗닠:** ?좊━湲고뙋 ?꾩뿉?????뺣룄??怨좊????붿냼瑜?援ы쁽?섍린 ?꾪빐 諛쒖깮?섎뒗 誘몄꽭 湲덉냽 諛곗꽑???⑤씫 ?꾪뿕, ?ㅼ링 諛뺣쭑 媛꾩쓽 ?묐젰(stress) 李⑥씠濡??명븳 諛뺣━ ?꾩긽, 洹몃━怨?蹂듭옟???⑥감???곕Ⅸ ?됲깂??臾몄젣瑜??닿껐?섍린 ?꾪븳 ?듯빀 怨듭젙 ?꾨왂???쒖븞?덉뒿?덈떎.</li><li>援ъ껜?곸쑝濡?ACD OPC 蹂댁긽 湲곗닠 ?꾩엯, ?ы넗由ъ냼洹몃옒???멸킅/?먯묶 怨듭젙???묒뾽 理쒖쟻?? 諛뺣쭑 利앹갑 議곌굔 諛??대? ?묐젰 ?쒕떇, AA ?곸뿭 ???λ룞???됲깂??trench filling) 怨듭젙 ?깆쓣 ?곸슜?덉뒿?덈떎.</li><li>?대? ?듯빐 2.56?몄튂 ?ш린?먯꽌 2560 횞 2740(1512 PPI)??珥덇퀬?댁긽?? 1,000,000:1??紐낆븫鍮? 120Hz 二쇱궗??諛???? ?꾨젰 ?뚮え瑜??ъ꽦?섏??쇰ŉ, ?ㅻ━肄?湲곕컲 留덉씠?щ줈 OLED(OLEDoS)??媛?????쎌젏??'?믪? ?쒖“ ?먭?'瑜?洹쇰낯?곸쑝濡??뚰뵾?섎뒗 諛⑹븞???쒖떆?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**Glass-based OLED 湲곕컲 怨좏빐?곷룄 援ы쁽? 留ㅼ슦 媛뺣젰???꾪삊:** 以묎뎅 CSOT媛 湲곗〈 LCD????댁긽??OLED ?쇱씤???곗씠???좊━湲고뙋 怨듭젙???뚯뼱?щ젮 臾대젮 1500 PPI湲?Real RGB瑜??묒궛 媛???섏??쇰줈 ?뚯뼱?щ졇?ㅻ뒗 寃껋? 鍮꾩슜??誘쇨컧???以묒쟻??VR 湲곌린 ?쒖옣?먯꽌 OLEDoS瑜?媛뺣젰?섍쾶 ?泥댄븷 ???덈뒗 臾닿린?낅땲??</li><li>**?곴레??踰ㅼ튂留덊궧 諛????紐⑥깋 ?쒓툒:** ?섏씠?붾뱶??OLEDoS濡?媛?붾씪??蹂쇰ⅷ(Mass) ?쒖옣?먯꽌???대윭??怨좏빐?곷룄 Glass OLED媛 二쇰젰????媛?μ꽦???믪뒿?덈떎. ?쇱꽦?붿뒪?뚮젅????떆 ?좊━湲고뙋 湲곕컲??FMM 怨듭젙 ?쒓퀎 ?뚰뙆 湲곗닠(珥덉젙諛 留덉뒪?? ?멸킅/?앷컖 怨듭젙 寃고빀 ????????좏뻾 ?곌뎄 ?깃낵瑜?泥좎???遺꾩꽍?섍퀬 踰ㅼ튂留덊궧?섏뿬 以묒?媛??VR ?붿뒪?뚮젅??濡쒕뱶留?諛⑹뼱 ?꾨왂??留덈젴?댁빞 ?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-20-3">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>20-3</h2>
-                <button class="btn btn-copy" onclick="copyText('content-20-3')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-20-3">
-                <h1>20-3.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>A Study on the Design Scheme of a 2540 PPI Fast LCD for VR</p>
-<h3>2. 저자</h3>
-<p>Yanqing Chen, Xinfang Li, Jinyao Wang, Shibiao Wang, Jie Tong, Jianyun Xie, Yunbo Zhang</p>
-<h3>3. 소속</h3>
-<p>BOE CHUANGYUAN Technology Co., Ltd., Beijing, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 BOE가 VR 디스플레이 시장에서 원가 경쟁력이 높은 LCD 기술을 활용하여, 무려 2540 PPI에 달하는 초고해상도 Fast LCD 설계 방안을 제안한 논문입니다.</li>
-<li><strong>기술적 난제 극복 설계:</strong> 픽셀 밀도가 극도로 높아짐에 따라 투과율이 떨어지고 구동 회로 설계가 어려워지는 한계를 극복하기 위해 기존의 일반적인 RGB 배열을 깬 'RGB 델타(Delta) 픽셀 구조'를 도입하여 체감 해상도를 높이고 알리어싱 현상을 줄였습니다.</li>
-<li><strong>구조 혁신:</strong> 컬러필터 위로 회로를 올리는 향상된 COA(Color Filter-on-Array) 구조를 적용하고, 수평 정렬 구조의 포토스페이서(PS1) 설계 및 저반사 유기막(PLN0) 차폐 구조를 새롭게 고안하여 개구율과 패널 투과율을 기존 대비 크게 향상시켰습니다.</li>
-<li>추가로, 화면 가장자리 게이트 구동 회로(GOA) 레이아웃을 1mm 수준으로 얇게 최적화하고, 백라이트에 Mini-LED 로컬 디밍 구조를 결합하여 VR 제품에 적합한 90Hz 구동과 높은 명암비, 넓은 색재현율을 확보했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>저가형 디스플레이 기술의 초고해상도 진입 위협:</strong> 삼성디스플레이가 OLED 및 OLEDoS(실리콘 기반) 등 차세대 자발광 기술에 집중하고 있는 사이, 경쟁사인 BOE는 가장 저렴하고 대량 생산이 용이한 LCD 라인을 활용해 2000 PPI 이상의 성능을 구현해내려는 시도를 멈추지 않고 있습니다.</li>
-<li><strong>투트랙 시장 전략 변화 모니터링 필요:</strong> 애플 비전프로처럼 고가 시장에는 OLEDoS가 채택되지만, 메타 퀘스트 등 대량 보급형 제품 시장에서는 이와 같이 델타픽셀+미니LED로 무장한 '초고해상도 저가 Fast LCD'가 여전히 강력한 가격 경쟁력을 바탕으로 위협이 될 수 있으므로 시장 수요 변화에 대한 지속적인 검토와 모니터링이 필요합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 20-3</h2>
+        <button onclick="copyThis('content-20-3')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-20-3" style="margin-top: 15px;">
+            <h1>20-3.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>A Study on the Design Scheme of a 2540 PPI Fast LCD for VR</p><h3>2. ???Yanqing Chen, Xinfang Li, Jinyao Wang, Shibiao Wang, Jie Tong, Jianyun Xie, Yunbo Zhang</h3><h3>3. ?뚯냽</h3><p>BOE CHUANGYUAN Technology Co., Ltd., Beijing, China</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 BOE媛 VR ?붿뒪?뚮젅???쒖옣?먯꽌 ?먭? 寃쎌웳?μ씠 ?믪? LCD 湲곗닠???쒖슜?섏뿬, 臾대젮 2540 PPI???ы븯??珥덇퀬?댁긽??Fast LCD ?ㅺ퀎 諛⑹븞???쒖븞???쇰Ц?낅땲??</li><li>**湲곗닠???쒖젣 洹밸났 ?ㅺ퀎:** ?쎌? 諛?꾧? 洹밸룄濡??믪븘吏먯뿉 ?곕씪 ?ш낵?⑥씠 ?⑥뼱吏怨?援щ룞 ?뚮줈 ?ㅺ퀎媛 ?대젮?뚯????쒓퀎瑜?洹밸났?섍린 ?꾪빐 湲곗〈???쇰컲?곸씤 RGB 諛곗뿴??源?'RGB ?명?(Delta) ?쎌? 援ъ“'瑜??꾩엯?섏뿬 泥닿컧 ?댁긽?꾨? ?믪씠怨??뚮━?댁떛 ?꾩긽??以꾩??듬땲??</li><li>**援ъ“ ?곸떊:** 而щ윭?꾪꽣 ?꾨줈 ?뚮줈瑜??щ━???μ긽??COA(Color Filter-on-Array) 援ъ“瑜??곸슜?섍퀬, ?섑룊 ?뺣젹 援ъ“???ы넗?ㅽ럹?댁꽌(PS1) ?ㅺ퀎 諛??諛섏궗 ?좉린留?PLN0) 李⑦룓 援ъ“瑜??덈∼寃?怨좎븞?섏뿬 媛쒓뎄?④낵 ?⑤꼸 ?ш낵?⑥쓣 湲곗〈 ?鍮??ш쾶 ?μ긽?쒖섟?듬땲??</li><li>異붽?濡? ?붾㈃ 媛?μ옄由?寃뚯씠??援щ룞 ?뚮줈(GOA) ?덉씠?꾩썐??1mm ?섏??쇰줈 ?뉕쾶 理쒖쟻?뷀븯怨? 諛깅씪?댄듃??Mini-LED 濡쒖뺄 ?붾컢 援ъ“瑜?寃고빀?섏뿬 VR ?쒗뭹???곹빀??90Hz 援щ룞怨??믪? 紐낆븫鍮? ?볦? ?됱옱?꾩쑉???뺣낫?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?媛???붿뒪?뚮젅??湲곗닠??珥덇퀬?댁긽??吏꾩엯 ?꾪삊:** ?쇱꽦?붿뒪?뚮젅?닿? OLED 諛?OLEDoS(?ㅻ━肄?湲곕컲) ??李⑥꽭? ?먮컻愿?湲곗닠??吏묒쨷?섍퀬 ?덈뒗 ?ъ씠, 寃쎌웳?ъ씤 BOE??媛????댄븯怨?????앹궛???⑹씠??LCD ?쇱씤???쒖슜??2000 PPI ?댁긽???깅뒫??援ы쁽?대궡?ㅻ뒗 ?쒕룄瑜?硫덉텛吏 ?딄퀬 ?덉뒿?덈떎.</li><li>**?ы듃???쒖옣 ?꾨왂 蹂??紐⑤땲?곕쭅 ?꾩슂:** ?좏뵆 鍮꾩쟾?꾨줈泥섎읆 怨좉? ?쒖옣?먮뒗 OLEDoS媛 梨꾪깮?섏?留? 硫뷀? ?섏뒪???????蹂닿툒???쒗뭹 ?쒖옣?먯꽌???댁? 媛숈씠 ?명??쎌?+誘몃땲LED濡?臾댁옣??'珥덇퀬?댁긽???媛 Fast LCD'媛 ?ъ쟾??媛뺣젰??媛寃?寃쎌웳?μ쓣 諛뷀깢?쇰줈 ?꾪삊???????덉쑝誘濡??쒖옣 ?섏슂 蹂?붿뿉 ???吏?띿쟻??寃?좎? 紐⑤땲?곕쭅???꾩슂?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-20-4">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>20-4</h2>
-                <button class="btn btn-copy" onclick="copyText('content-20-4')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-20-4">
-                <h1>20-4.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>High-performance Micro-OLED Technology Empowering 1,500ppi real RGB Glass-based VR Display</p>
-<h3>2. 저자</h3>
-<p>Wenfeng Song, Rong Zhang, Lei An, Houchi Zhang, Guang Yang, Lei Mi, Weiqi Xu, Rubo Xing, Xiujian Zhu</p>
-<h3>3. 소속</h3>
-<p>Beijing Visionox Technology Co., Ltd., Beijing, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 패널 업체 Visionox(비전옥스)가 1500 PPI급 유리기판 기반(Glass-based) VR 디스플레이를 구현하기 위해 개발한 백색 OLED(White-OLED) + 컬러필터 방식의 마이크로 OLED 고성능화 기술 연구입니다.</li>
-<li>백색 OLED 소자를 탠덤(Tandem)으로 쌓을 때 발생하는 두께 증가, 측면 누설 전류 심화, 컬러필터 장착 시의 광 효율 하락 등의 단점을 해결하기 위해 <strong>마이크로 캐비티(Micro-cavity) 기술</strong>을 리소그래피 공정으로 정밀하게 튜닝하여 적용했습니다.</li>
-<li>투명 ITO 전극층을 두께별로 다르게 식각(patterning)하는 방식을 통해 B/RG 2-스택 구조에서도 적색과 녹색의 효율을 비약적으로 높여 동등 효율 33.8 cd/A를 기록했으며, 누설 전류 억제로 높은 전류 밀도에서도 화질 저하를 방지했습니다.</li>
-<li>또한 ALD/CVD를 이용한 다층 무기 박막 봉지(TFE) 기술의 굴절률 매칭을 통해 광학 공진 효과를 보완하고, 두께 변화에 민감한 측면 시야각 색 변이(Color shift)를 보정하여 DCI-P3 98.5% 이상의 넓은 색재현율을 확보했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>유리기판 기반 중가형 VR 패널 시장 경쟁 심화:</strong> 앞서 CSOT(20-2.pdf)가 FMM 방식의 Real RGB를 시도했다면, 비전옥스는 WOLED+CF 구조에 리소그래피 기반 광학 공진층 설계 기술을 극대화하여 1500 PPI의 고화질/고효율을 유리기판 상에서 이루어내는 성과를 보여주었습니다.</li>
-<li><strong>경쟁사의 리소그래피/광학 구조 설계 기술 내재화 경계:</strong> 이는 FMM 해상도의 한계를 리소그래피와 광학(Micro-cavity) 기술로 영리하게 우회하여 OLEDoS 대비 단가를 크게 낮추려는 중국 기업들의 전략적 접근입니다. 삼성디스플레이 역시 볼륨 시장(보급형 하이엔드 VR 기기)을 타겟으로 하는 유리기판 기반 고해상도 솔루션 기술의 비용-성능 효율성을 벤치마킹하고 방어 논리를 검토할 필요가 큽니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 20-4</h2>
+        <button onclick="copyThis('content-20-4')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-20-4" style="margin-top: 15px;">
+            <h1>20-4.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>High-performance Micro-OLED Technology Empowering 1,500ppi real RGB Glass-based VR Display</p><h3>2. ???Wenfeng Song, Rong Zhang, Lei An, Houchi Zhang, Guang Yang, Lei Mi, Weiqi Xu, Rubo Xing, Xiujian Zhu</h3><h3>3. ?뚯냽</h3><p>Beijing Visionox Technology Co., Ltd., Beijing, China</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 ?⑤꼸 ?낆껜 Visionox(鍮꾩쟾?μ뒪)媛 1500 PPI湲??좊━湲고뙋 湲곕컲(Glass-based) VR ?붿뒪?뚮젅?대? 援ы쁽?섍린 ?꾪빐 媛쒕컻??諛깆깋 OLED(White-OLED) + 而щ윭?꾪꽣 諛⑹떇??留덉씠?щ줈 OLED 怨좎꽦?ν솕 湲곗닠 ?곌뎄?낅땲??</li><li>諛깆깋 OLED ?뚯옄瑜??좊뜡(Tandem)?쇰줈 ?볦쓣 ??諛쒖깮?섎뒗 ?먭퍡 利앷?, 痢〓㈃ ?꾩꽕 ?꾨쪟 ?ы솕, 而щ윭?꾪꽣 ?μ갑 ?쒖쓽 愿??⑥쑉 ?섎씫 ?깆쓽 ?⑥젏???닿껐?섍린 ?꾪빐 **留덉씠?щ줈 罹먮퉬??Micro-cavity) 湲곗닠**??由ъ냼洹몃옒??怨듭젙?쇰줈 ?뺣??섍쾶 ?쒕떇?섏뿬 ?곸슜?덉뒿?덈떎.</li><li>?щ챸 ITO ?꾧레痢듭쓣 ?먭퍡蹂꾨줈 ?ㅻⅤ寃??앷컖(patterning)?섎뒗 諛⑹떇???듯빐 B/RG 2-?ㅽ깮 援ъ“?먯꽌???곸깋怨??뱀깋???⑥쑉??鍮꾩빟?곸쑝濡??믪뿬 ?숇벑 ?⑥쑉 33.8 cd/A瑜?湲곕줉?덉쑝硫? ?꾩꽕 ?꾨쪟 ?듭젣濡??믪? ?꾨쪟 諛?꾩뿉?쒕룄 ?붿쭏 ??섎? 諛⑹??덉뒿?덈떎.</li><li>?먰븳 ALD/CVD瑜??댁슜???ㅼ링 臾닿린 諛뺣쭑 遊됱?(TFE) 湲곗닠??援댁젅瑜?留ㅼ묶???듯빐 愿묓븰 怨듭쭊 ?④낵瑜?蹂댁셿?섍퀬, ?먭퍡 蹂?붿뿉 誘쇨컧??痢〓㈃ ?쒖빞媛???蹂??Color shift)瑜?蹂댁젙?섏뿬 DCI-P3 98.5% ?댁긽???볦? ?됱옱?꾩쑉???뺣낫?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?좊━湲고뙋 湲곕컲 以묎???VR ?⑤꼸 ?쒖옣 寃쎌웳 ?ы솕:** ?욎꽌 CSOT(20-2.pdf)媛 FMM 諛⑹떇??Real RGB瑜??쒕룄?덈떎硫? 鍮꾩쟾?μ뒪??WOLED+CF 援ъ“??由ъ냼洹몃옒??湲곕컲 愿묓븰 怨듭쭊痢??ㅺ퀎 湲곗닠??洹밸??뷀븯??1500 PPI??怨좏솕吏?怨좏슚?⑥쓣 ?좊━湲고뙋 ?곸뿉???대（?대궡???깃낵瑜?蹂댁뿬二쇱뿀?듬땲??</li><li>**寃쎌웳?ъ쓽 由ъ냼洹몃옒??愿묓븰 援ъ“ ?ㅺ퀎 湲곗닠 ?댁옱??寃쎄퀎:** ?대뒗 FMM ?댁긽?꾩쓽 ?쒓퀎瑜?由ъ냼洹몃옒?쇱? 愿묓븰(Micro-cavity) 湲곗닠濡??곷━?섍쾶 ?고쉶?섏뿬 OLEDoS ?鍮??④?瑜??ш쾶 ??텛?ㅻ뒗 以묎뎅 湲곗뾽?ㅼ쓽 ?꾨왂???묎렐?낅땲?? ?쇱꽦?붿뒪?뚮젅????떆 蹂쇰ⅷ ?쒖옣(蹂닿툒???섏씠?붾뱶 VR 湲곌린)???寃잛쑝濡??섎뒗 ?좊━湲고뙋 湲곕컲 怨좏빐?곷룄 ?붾（??湲곗닠??鍮꾩슜-?깅뒫 ?⑥쑉?깆쓣 踰ㅼ튂留덊궧?섍퀬 諛⑹뼱 ?쇰━瑜?寃?좏븷 ?꾩슂媛 ?쎈땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-44-1">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>44-1</h2>
-                <button class="btn btn-copy" onclick="copyText('content-44-1')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-44-1">
-                <h1>44-1.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>C-Axis Aligned Crystalline In-Ga-Zn-O FETs Enabling High-Resolution, Low-Power Micro OLED Displays</p>
-<h3>2. 저자</h3>
-<p>Hidetomo Kobayashi, 외 다수</p>
-<h3>3. 소속</h3>
-<p>Semiconductor Energy Laboratory Co., Ltd. (SEL)</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>일본 SEL이 8000 ppi 이상의 극초고해상도 마이크로 OLED 디스플레이를 구동하기 위한 산화물 반도체(Oxide TFT) 기술 적용 결과를 발표한 논문입니다.</li>
-<li>실리콘(Si) CMOS 대신 <strong>c-축 배향 결정성(CAAC) IGZO FET</strong>를 사용하여, 픽셀 피치가 극도로 좁은 8000 ppi 마이크로 디스플레이 환경에서도 화질 저하 없이 안정적인 픽셀 구동을 실현했습니다.</li>
-<li>마스크 없이 증착하는 MML(Metal Maskless) 기술을 적용해 RGB 서브픽셀 사이의 컬러 혼합(Color mixing) 문제를 제거했습니다.</li>
-<li>CAAC-IGZO FET 소자의 고유한 장점인 <strong>초저누설 전류(Low off-leakage current)</strong> 특성을 바탕으로, 고해상도를 유지하면서도 소비 전력을 극적으로 낮출 수 있으며, 향후 포비티드 렌더링(foveated rendering) 등 부분 저전력 구동에 매우 유리함을 증명했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>실리콘 CMOS를 대체하는 산화물 구동 소자의 가능성 검증:</strong> 현재 고해상도 OLEDoS는 주로 실리콘 웨이퍼 기반의 CMOS를 사용하지만, SEL의 성과는 Oxide TFT 기술만으로도 8000 ppi라는 극한의 해상도 구현 및 초저전력 구동이 가능함을 입증했습니다.</li>
-<li><strong>초저전력 디스플레이를 위한 대안 로드맵 검토:</strong> VR/AR 글래스에서 발열과 배터리 한계가 핵심 과제로 부상함에 따라, 삼성디스플레이의 차세대 OLEDoS 백플레인 기술 전략에 있어 IGZO 기반 하이브리드 구동 구조 또는 저전력 산화물 소자 도입에 대한 벤치마킹과 선행 연구 가치가 매우 높습니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 44-1</h2>
+        <button onclick="copyThis('content-44-1')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-44-1" style="margin-top: 15px;">
+            <h1>44-1.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>C-Axis Aligned Crystalline In-Ga-Zn-O FETs Enabling High-Resolution, Low-Power Micro OLED Displays</p><h3>2. ???Hidetomo Kobayashi, ???ㅼ닔</h3><h3>3. ?뚯냽</h3><p>Semiconductor Energy Laboratory Co., Ltd. (SEL)</p><h3>4. 二쇱슂?댁슜</h3><li>?쇰낯 SEL??8000 ppi ?댁긽??洹뱀큹怨좏빐?곷룄 留덉씠?щ줈 OLED ?붿뒪?뚮젅?대? 援щ룞?섍린 ?꾪븳 ?고솕臾?諛섎룄泥?Oxide TFT) 湲곗닠 ?곸슜 寃곌낵瑜?諛쒗몴???쇰Ц?낅땲??</li><li>?ㅻ━肄?Si) CMOS ???**c-異?諛고뼢 寃곗젙??CAAC) IGZO FET**瑜??ъ슜?섏뿬, ?쎌? ?쇱튂媛 洹밸룄濡?醫곸? 8000 ppi 留덉씠?щ줈 ?붿뒪?뚮젅???섍꼍?먯꽌???붿쭏 ????놁씠 ?덉젙?곸씤 ?쎌? 援щ룞???ㅽ쁽?덉뒿?덈떎.</li><li>留덉뒪???놁씠 利앹갑?섎뒗 MML(Metal Maskless) 湲곗닠???곸슜??RGB ?쒕툕?쎌? ?ъ씠??而щ윭 ?쇳빀(Color mixing) 臾몄젣瑜??쒓굅?덉뒿?덈떎.</li><li>CAAC-IGZO FET ?뚯옄??怨좎쑀???μ젏??**珥덉??꾩꽕 ?꾨쪟(Low off-leakage current)** ?뱀꽦??諛뷀깢?쇰줈, 怨좏빐?곷룄瑜??좎??섎㈃?쒕룄 ?뚮퉬 ?꾨젰??洹뱀쟻?쇰줈 ??텧 ???덉쑝硫? ?ν썑 ?щ퉬?곕뱶 ?뚮뜑留?foveated rendering) ??遺遺???꾨젰 援щ룞??留ㅼ슦 ?좊━?⑥쓣 利앸챸?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?ㅻ━肄?CMOS瑜??泥댄븯???고솕臾?援щ룞 ?뚯옄??媛?μ꽦 寃利?** ?꾩옱 怨좏빐?곷룄 OLEDoS??二쇰줈 ?ㅻ━肄??⑥씠??湲곕컲??CMOS瑜??ъ슜?섏?留? SEL???깃낵??Oxide TFT 湲곗닠留뚯쑝濡쒕룄 8000 ppi?쇰뒗 洹뱁븳???댁긽??援ы쁽 諛?珥덉??꾨젰 援щ룞??媛?ν븿???낆쬆?덉뒿?덈떎.</li><li>**珥덉??꾨젰 ?붿뒪?뚮젅?대? ?꾪븳 ???濡쒕뱶留?寃??** VR/AR 湲?섏뒪?먯꽌 諛쒖뿴怨?諛고꽣由??쒓퀎媛 ?듭떖 怨쇱젣濡?遺?곹븿???곕씪, ?쇱꽦?붿뒪?뚮젅?댁쓽 李⑥꽭? OLEDoS 諛깊뵆?덉씤 湲곗닠 ?꾨왂???덉뼱 IGZO 湲곕컲 ?섏씠釉뚮━??援щ룞 援ъ“ ?먮뒗 ??꾨젰 ?고솕臾??뚯옄 ?꾩엯?????踰ㅼ튂留덊궧怨??좏뻾 ?곌뎄 媛移섍? 留ㅼ슦 ?믪뒿?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-44-2">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>44-2</h2>
-                <button class="btn btn-copy" onclick="copyText('content-44-2')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-44-2">
-                <h1>44-2.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>150,000nits Full-color Native RGB Single Junction 3,386PPI Micro-OLED</p>
-<h3>2. 저자</h3>
-<p>Kuo-Cheng Hsu, Huei-Siou Chen, Li-Min Huang, Long-Ming Lu, Ker-Tai Chu</p>
-<h3>3. 소속</h3>
-<p>INT-Tech Co., Ltd., Hsin-chu, Republic of China</p>
-<p>Taizhou Guanyu Technology Co., Ltd., Taizhou city, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>대만의 INT-Tech가 독자적인 'uNEEDXR™' 기술을 통해 무려 150,000 nits의 초고휘도를 자랑하는 풀컬러 3,386 PPI 마이크로 OLED 디스플레이를 시연한 놀라운 결과입니다.</li>
-<li><strong>혁신 기술:</strong> OLEDoS에서 통상 사용되는 백색 OLED+컬러필터(WOLED+CF) 방식의 광 효율 한계(~1만 nits 수준)를 극복하기 위해, 서브픽셀 단위로 직접 RGB 발광 물질을 올리는 <strong>단일 접합 Native RGB 패터닝 기술</strong>을 구현했습니다.</li>
-<li>이를 위해 철저하게 통제된 산소/수분 환경 내에서 독자적인 장비를 사용, RGB 서브픽셀을 순차적으로 증착 패터닝하여 7.5µm 픽셀 피치 하에서도 완벽한 컬러 독립성(혼색 방지)을 확보했습니다.</li>
-<li>결과적으로 기존 WOLED+CF 패널 대비 동일 전력에서 11배 이상의 휘도(최대 15만 nits 초과)를 낼 수 있고, DCI-P3 색역 95% 이상 및 1,000,000:1 이상의 명암비를 달성해 전력 효율과 휘도 면에서 혁신적인 진보를 이루었습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>마이크로 OLED 휘도의 한계 돌파로 인한 강한 위협:</strong> 15만 nits의 네이티브 RGB 구현은 현재 AR/VR용 마이크로 디스플레이에서 최고의 화두인 휘도 갈증을 단숨에 해소하는 수치이며, MicroLED에 버금가는 성능을 OLED로 달성해 낸 것입니다.</li>
-<li><strong>경쟁사의 패터닝 기술 분석 및 대비 필수:</strong> FMM 패터닝의 한계나 실리콘 포토리소그래피의 단점(재료 손상 등)을 어떻게 회피하여 Native RGB를 고수율로 완성했는지에 대한 깊은 벤치마킹이 요구됩니다. 삼성디스플레이의 FSM 기반 RGB OLEDoS 기술의 우위를 점하기 위해서는 이들의 상용화 가능성과 원가 경쟁력을 철저히 검토해야 합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 44-2</h2>
+        <button onclick="copyThis('content-44-2')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-44-2" style="margin-top: 15px;">
+            <h1>44-2.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>150,000nits Full-color Native RGB Single Junction 3,386PPI Micro-OLED</p><h3>2. ???Kuo-Cheng Hsu, Huei-Siou Chen, Li-Min Huang, Long-Ming Lu, Ker-Tai Chu</h3><h3>3. ?뚯냽</h3><p>INT-Tech Co., Ltd., Hsin-chu, Republic of China</p><p>Taizhou Guanyu Technology Co., Ltd., Taizhou city, China</p><h3>4. 二쇱슂?댁슜</h3><li>?留뚯쓽 INT-Tech媛 ?낆옄?곸씤 'uNEEDXR?? 湲곗닠???듯빐 臾대젮 150,000 nits??珥덇퀬?섎룄瑜??먮옉?섎뒗 ?而щ윭 3,386 PPI 留덉씠?щ줈 OLED ?붿뒪?뚮젅?대? ?쒖뿰????쇱슫 寃곌낵?낅땲??</li><li>**?곸떊 湲곗닠:** OLEDoS?먯꽌 ?듭긽 ?ъ슜?섎뒗 諛깆깋 OLED+而щ윭?꾪꽣(WOLED+CF) 諛⑹떇??愿??⑥쑉 ?쒓퀎(~1留?nits ?섏?)瑜?洹밸났?섍린 ?꾪빐, ?쒕툕?쎌? ?⑥쐞濡?吏곸젒 RGB 諛쒓킅 臾쇱쭏???щ━??**?⑥씪 ?묓빀 Native RGB ?⑦꽣??湲곗닠**??援ы쁽?덉뒿?덈떎.</li><li>?대? ?꾪빐 泥좎??섍쾶 ?듭젣???곗냼/?섎텇 ?섍꼍 ?댁뿉???낆옄?곸씤 ?λ퉬瑜??ъ슜, RGB ?쒕툕?쎌????쒖감?곸쑝濡?利앹갑 ?⑦꽣?앺븯??7.5쨉m ?쎌? ?쇱튂 ?섏뿉?쒕룄 ?꾨꼍??而щ윭 ?낅┰???쇱깋 諛⑹?)???뺣낫?덉뒿?덈떎.</li><li>寃곌낵?곸쑝濡?湲곗〈 WOLED+CF ?⑤꼸 ?鍮??숈씪 ?꾨젰?먯꽌 11諛??댁긽???섎룄(理쒕? 15留?nits 珥덇낵)瑜??????덇퀬, DCI-P3 ?됱뿭 95% ?댁긽 諛?1,000,000:1 ?댁긽??紐낆븫鍮꾨? ?ъ꽦???꾨젰 ?⑥쑉怨??섎룄 硫댁뿉???곸떊?곸씤 吏꾨낫瑜??대（?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**留덉씠?щ줈 OLED ?섎룄???쒓퀎 ?뚰뙆濡??명븳 媛뺥븳 ?꾪삊:** 15留?nits???ㅼ씠?곕툕 RGB 援ы쁽? ?꾩옱 AR/VR??留덉씠?щ줈 ?붿뒪?뚮젅?댁뿉??理쒓퀬???붾몢???섎룄 媛덉쬆???⑥닲???댁냼?섎뒗 ?섏튂?대ŉ, MicroLED??踰꾧툑媛???깅뒫??OLED濡??ъ꽦????寃껋엯?덈떎.</li><li>**寃쎌웳?ъ쓽 ?⑦꽣??湲곗닠 遺꾩꽍 諛??鍮??꾩닔:** FMM ?⑦꽣?앹쓽 ?쒓퀎???ㅻ━肄??ы넗由ъ냼洹몃옒?쇱쓽 ?⑥젏(?щ즺 ?먯긽 ?????대뼸寃??뚰뵾?섏뿬 Native RGB瑜?怨좎닔?⑤줈 ?꾩꽦?덈뒗吏?????源딆? 踰ㅼ튂留덊궧???붽뎄?⑸땲?? ?쇱꽦?붿뒪?뚮젅?댁쓽 FSM 湲곕컲 RGB OLEDoS 湲곗닠???곗쐞瑜??먰븯湲??꾪빐?쒕뒗 ?대뱾???곸슜??媛?μ꽦怨??먭? 寃쎌웳?μ쓣 泥좎???寃?좏빐???⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-44-3">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>44-3</h2>
-                <button class="btn btn-copy" onclick="copyText('content-44-3')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-44-3">
-                <h1>44-3.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>High-Resolution OLED Microdisplay for Near-Eye Display Applications</p>
-<h3>2. 저자</h3>
-<p>Kukjoo Kim, Jae-Won Lee, Chan-mo Kang, Jin-wook Shin, Dae Hyun Ahn, Wooseup Youm, Yong-Duck Kim, Yongjun Lee, Chul Woong Joo, Hyunsu Cho, Sukyung Choi, In Bok Baek, Byoung-Hwa Kwon, Nam Sung Cho, and Chun-Won Byun</p>
-<h3>3. 소속</h3>
-<p>Reality Device Research Division, Electronics and Telecommunications Research Institute (ETRI), Daejeon, Republic of Korea</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>한국전자통신연구원(ETRI)에서 XR 근안 디스플레이용 고해상도 OLEDoS를 개발하고, 이를 이용해 어지럼증의 원인인 수렴-조절 불일치(VAC)를 완화하는 <strong>SMV(Super Multi-View) 디스플레이 프로토타입</strong>을 시연한 연구입니다.</li>
-<li><strong>OLEDoS 패널 사양:</strong> 백플레인에 백색 OLED와 컬러필터를 결합하여 1.03인치 크기에서 2560 × 2560 해상도(7.2µm 픽셀 피치, 델타 RGB 배열) 및 DCI-P3 96.8% 색역을 구현했습니다.</li>
-<li><strong>SMV 시스템 적용:</strong> 이 고해상도 OLEDoS 패널 앞에 마이크로렌즈 어레이(MLA)를 부착하고, 동공 내 다중 시점을 형성하기 위한 렌더링 기법(후방 광선 추적 기반의 요소 이미지 어레이(EIA) 생성)을 적용했습니다.</li>
-<li>카메라를 이용한 실험 결과, 0.25m 가까운 곳에 초점을 맞출 때와 2~5m 떨어진 곳에 초점을 맞출 때 각각 의도된 객체가 선명해지거나 자연스럽게 흐릿해지는(Defocus blur) 광학적 뎁스(Depth) 구현에 성공했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>고해상도 패널의 응용(Application) 확장성 확인:</strong> 위협 요소라기보다는 자사의 고해상도 OLEDoS 패널이 차세대 광학계(MLA 기반 라이트필드 기술 등)와 어떻게 시스템 차원에서 결합하여 VR의 고질적 한계(VAC로 인한 어지럼증)를 해소할 수 있는지 실증한 좋은 선행 연구입니다.</li>
-<li><strong>시스템 레벨 생태계 선도 검토:</strong> OLEDoS 디스플레이의 해상도가 높아짐에 따라 이러한 다초점/라이트필드 광학 시스템이 본격 도입될 수 있으므로, 삼성디스플레이는 패널 단품 제조를 넘어 세트 업체의 SMV 광학계에 최적화된 패널 설계(픽셀 배열, 렌즈 정렬 매칭 등) 가이드라인을 준비하는 데 참고할 필요가 있습니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 44-3</h2>
+        <button onclick="copyThis('content-44-3')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-44-3" style="margin-top: 15px;">
+            <h1>44-3.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>High-Resolution OLED Microdisplay for Near-Eye Display Applications</p><h3>2. ???Kukjoo Kim, Jae-Won Lee, Chan-mo Kang, Jin-wook Shin, Dae Hyun Ahn, Wooseup Youm, Yong-Duck Kim, Yongjun Lee, Chul Woong Joo, Hyunsu Cho, Sukyung Choi, In Bok Baek, Byoung-Hwa Kwon, Nam Sung Cho, and Chun-Won Byun</h3><h3>3. ?뚯냽</h3><p>Reality Device Research Division, Electronics and Telecommunications Research Institute (ETRI), Daejeon, Republic of Korea</p><h3>4. 二쇱슂?댁슜</h3><li>?쒓뎅?꾩옄?듭떊?곌뎄??ETRI)?먯꽌 XR 洹쇱븞 ?붿뒪?뚮젅?댁슜 怨좏빐?곷룄 OLEDoS瑜?媛쒕컻?섍퀬, ?대? ?댁슜???댁??쇱쬆???먯씤???섎졃-議곗젅 遺덉씪移?VAC)瑜??꾪솕?섎뒗 **SMV(Super Multi-View) ?붿뒪?뚮젅???꾨줈?좏???*???쒖뿰???곌뎄?낅땲??</li><li>**OLEDoS ?⑤꼸 ?ъ뼇:** 諛깊뵆?덉씤??諛깆깋 OLED? 而щ윭?꾪꽣瑜?寃고빀?섏뿬 1.03?몄튂 ?ш린?먯꽌 2560 횞 2560 ?댁긽??7.2쨉m ?쎌? ?쇱튂, ?명? RGB 諛곗뿴) 諛?DCI-P3 96.8% ?됱뿭??援ы쁽?덉뒿?덈떎.</li><li>**SMV ?쒖뒪???곸슜:** ??怨좏빐?곷룄 OLEDoS ?⑤꼸 ?욎뿉 留덉씠?щ줈?뚯쫰 ?대젅??MLA)瑜?遺李⑺븯怨? ?숆났 ???ㅼ쨷 ?쒖젏???뺤꽦?섍린 ?꾪븳 ?뚮뜑留?湲곕쾿(?꾨갑 愿묒꽑 異붿쟻 湲곕컲???붿냼 ?대?吏 ?대젅??EIA) ?앹꽦)???곸슜?덉뒿?덈떎.</li><li>移대찓?쇰? ?댁슜???ㅽ뿕 寃곌낵, 0.25m 媛源뚯슫 怨녹뿉 珥덉젏??留욎텧 ?뚯? 2~5m ?⑥뼱吏?怨녹뿉 珥덉젏??留욎텧 ??媛곴컖 ?섎룄??媛앹껜媛 ?좊챸?댁?嫄곕굹 ?먯뿰?ㅻ읇寃??먮┸?댁???Defocus blur) 愿묓븰???곸뒪(Depth) 援ы쁽???깃났?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**怨좏빐?곷룄 ?⑤꼸???묒슜(Application) ?뺤옣???뺤씤:** ?꾪삊 ?붿냼?쇨린蹂대떎???먯궗??怨좏빐?곷룄 OLEDoS ?⑤꼸??李⑥꽭? 愿묓븰怨?MLA 湲곕컲 ?쇱씠?명븘??湲곗닠 ??? ?대뼸寃??쒖뒪??李⑥썝?먯꽌 寃고빀?섏뿬 VR??怨좎쭏???쒓퀎(VAC濡??명븳 ?댁??쇱쬆)瑜??댁냼?????덈뒗吏 ?ㅼ쬆??醫뗭? ?좏뻾 ?곌뎄?낅땲??</li><li>**?쒖뒪???덈꺼 ?앺깭怨??좊룄 寃??** OLEDoS ?붿뒪?뚮젅?댁쓽 ?댁긽?꾧? ?믪븘吏먯뿉 ?곕씪 ?대윭???ㅼ큹???쇱씠?명븘??愿묓븰 ?쒖뒪?쒖씠 蹂멸꺽 ?꾩엯?????덉쑝誘濡? ?쇱꽦?붿뒪?뚮젅?대뒗 ?⑤꼸 ?⑦뭹 ?쒖“瑜??섏뼱 ?명듃 ?낆껜??SMV 愿묓븰怨꾩뿉 理쒖쟻?붾맂 ?⑤꼸 ?ㅺ퀎(?쎌? 諛곗뿴, ?뚯쫰 ?뺣젹 留ㅼ묶 ?? 媛?대뱶?쇱씤??以鍮꾪븯????李멸퀬???꾩슂媛 ?덉뒿?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-44-4">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>44-4</h2>
-                <button class="btn btn-copy" onclick="copyText('content-44-4')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-44-4">
-                <h1>44-4.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Compact and Lightweight VR Glasses using Double Path Pancake Optics</p>
-<h3>2. 저자</h3>
-<p>Naru Usukura, Kiyoshi Minoura, Yoshiko Honma</p>
-<h3>3. 소속</h3>
-<p>Sharp Display Technology Corporation, Nara, Japan</p>
-<p>Kantatsu company, Tokyo, Japan</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>일본 Sharp에서 광효율을 극대화한 <strong>'더블 패스(Double Path, DP) 팬케이크 광학계'</strong>를 개발하여, 초경량(198g) 컴팩트 VR 글래스 상용화(Xrostella VR1)에 성공한 과정을 소개합니다.</li>
-<li><strong>광효율 한계 돌파:</strong> 기존 팬케이크 렌즈는 빛이 반거울을 두 번 통과하므로 이론적 최대 광효율이 25%에 불과하나, DP 팬케이크 광학계는 2개의 빛 경로를 활용해 기존 대비 약 1.8배 높은 광효율(42.2%)을 달성했습니다. 이는 디스플레이의 전력 소모와 발열을 크게 줄이는 핵심 요인이 됩니다.</li>
-<li><strong>광학 성능 고도화:</strong> R2 렌즈 설계 최적화를 통해 넓은 시야각(FOV 90도) 가장자리에서도 MTF(해상력 지표) 성능을 비약적으로 개선하여 화질을 향상시켰습니다.</li>
-<li>편측 텔레센트릭(telecentric) 광학 구조에 가깝게 설계하여, 배율의 심각한 변화나 화질 저하 없이 사용자 시력에 맞춘 시력 보정 기능(Diopter adjustment, 0D ~ -9D)을 자체적으로 내장하는 데 성공했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>디스플레이 휘도 부담 경감 및 폼팩터 경쟁력:</strong> 팬케이크 광학계의 광효율이 25%에서 42% 수준으로 1.8배 뛰어오른다는 것은 패널(OLED/OLEDoS)이 내야 하는 요구 휘도가 그만큼 낮아진다는 뜻입니다. 이는 발열 저감, 배터리 효율 향상 및 제품 수명 연장에 결정적 역할을 합니다.</li>
-<li><strong>세트 기술 발전과의 동기화 필요:</strong> 광학 업계(Sharp 등)에서 이처럼 고효율 렌즈와 자체 시도 조절(Diopter) 렌즈를 내장하는 방향으로 진화하고 있으므로, 삼성디스플레이는 차세대 VR 패널의 휘도-수명 로드맵 수립 시 이러한 세트 단위의 광학 효율 개선 추이를 반영하여 과도한 단가 상승(극한의 휘도 스펙 요구)을 막고 최적의 패널을 제안할 필요가 있습니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 44-4</h2>
+        <button onclick="copyThis('content-44-4')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-44-4" style="margin-top: 15px;">
+            <h1>44-4.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Compact and Lightweight VR Glasses using Double Path Pancake Optics</p><h3>2. ???Naru Usukura, Kiyoshi Minoura, Yoshiko Honma</h3><h3>3. ?뚯냽</h3><p>Sharp Display Technology Corporation, Nara, Japan</p><p>Kantatsu company, Tokyo, Japan</p><h3>4. 二쇱슂?댁슜</h3><li>?쇰낯 Sharp?먯꽌 愿묓슚?⑥쓣 洹밸??뷀븳 **'?붾툝 ?⑥뒪(Double Path, DP) ?ъ??댄겕 愿묓븰怨?**瑜?媛쒕컻?섏뿬, 珥덇꼍??198g) 而댄뙥??VR 湲?섏뒪 ?곸슜??Xrostella VR1)???깃났??怨쇱젙???뚭컻?⑸땲??</li><li>**愿묓슚???쒓퀎 ?뚰뙆:** 湲곗〈 ?ъ??댄겕 ?뚯쫰??鍮쏆씠 諛섍굅?몄쓣 ??踰??듦낵?섎?濡??대줎??理쒕? 愿묓슚?⑥씠 25%??遺덇낵?섎굹, DP ?ъ??댄겕 愿묓븰怨꾨뒗 2媛쒖쓽 鍮?寃쎈줈瑜??쒖슜??湲곗〈 ?鍮???1.8諛??믪? 愿묓슚??42.2%)???ъ꽦?덉뒿?덈떎. ?대뒗 ?붿뒪?뚮젅?댁쓽 ?꾨젰 ?뚮え? 諛쒖뿴???ш쾶 以꾩씠???듭떖 ?붿씤???⑸땲??</li><li>**愿묓븰 ?깅뒫 怨좊룄??** R2 ?뚯쫰 ?ㅺ퀎 理쒖쟻?붾? ?듯빐 ?볦? ?쒖빞媛?FOV 90?? 媛?μ옄由ъ뿉?쒕룄 MTF(?댁긽??吏?? ?깅뒫??鍮꾩빟?곸쑝濡?媛쒖꽑?섏뿬 ?붿쭏???μ긽?쒖섟?듬땲??</li><li>?몄륫 ?붾젅?쇳듃由?telecentric) 愿묓븰 援ъ“??媛源앷쾶 ?ㅺ퀎?섏뿬, 諛곗쑉???ш컖??蹂?붾굹 ?붿쭏 ????놁씠 ?ъ슜???쒕젰??留욎텣 ?쒕젰 蹂댁젙 湲곕뒫(Diopter adjustment, 0D ~ -9D)???먯껜?곸쑝濡??댁옣?섎뒗 ???깃났?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?붿뒪?뚮젅???섎룄 遺??寃쎄컧 諛??쇳뙥??寃쎌웳??** ?ъ??댄겕 愿묓븰怨꾩쓽 愿묓슚?⑥씠 25%?먯꽌 42% ?섏??쇰줈 1.8諛??곗뼱?ㅻⅨ?ㅻ뒗 寃껋? ?⑤꼸(OLED/OLEDoS)???댁빞 ?섎뒗 ?붽뎄 ?섎룄媛 洹몃쭔????븘吏꾨떎???살엯?덈떎. ?대뒗 諛쒖뿴 ?媛? 諛고꽣由??⑥쑉 ?μ긽 諛??쒗뭹 ?섎챸 ?곗옣??寃곗젙????븷???⑸땲??</li><li>**?명듃 湲곗닠 諛쒖쟾怨쇱쓽 ?숆린???꾩슂:** 愿묓븰 ?낃퀎(Sharp ???먯꽌 ?댁쿂??怨좏슚???뚯쫰? ?먯껜 ?쒕룄 議곗젅(Diopter) ?뚯쫰瑜??댁옣?섎뒗 諛⑺뼢?쇰줈 吏꾪솕?섍퀬 ?덉쑝誘濡? ?쇱꽦?붿뒪?뚮젅?대뒗 李⑥꽭? VR ?⑤꼸???섎룄-?섎챸 濡쒕뱶留??섎┰ ???대윭???명듃 ?⑥쐞??愿묓븰 ?⑥쑉 媛쒖꽑 異붿씠瑜?諛섏쁺?섏뿬 怨쇰룄???④? ?곸듅(洹뱁븳???섎룄 ?ㅽ럺 ?붽뎄)??留됯퀬 理쒖쟻???⑤꼸???쒖븞???꾩슂媛 ?덉뒿?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-56-1">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>56-1</h2>
-                <button class="btn btn-copy" onclick="copyText('content-56-1')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-56-1">
-                <h1>56-1.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>The New CMOS GOA Circuit with Partitioned Frequency Division Function in AMOLED</p>
-<h3>2. 저자</h3>
-<p>Huanxi Zhang, Xiaolei Zhang, Lei Wu, Shaojing Wu, Hong Fang, Zuomin Liao, Mingzhou Wu, Juncheng Xiao, Chao Dai</p>
-<h3>3. 소속</h3>
-<p>Wuhan China Star Optoelectronics Semiconductor Display Technology Corporation (CSOT), Wuhan, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 CSOT가 AMOLED 패널, 특히 저주파 구동에 유리한 LTPO 디스플레이의 구동 전력과 베젤을 줄이기 위해 '주파수 분할(Partitioned Frequency Division) 기능을 갖춘 새로운 CMOS GOA(Gate on Array) 회로'를 제안한 논문입니다.</li>
-<li><strong>문제점:</strong> 최근 스마트폰 등에 널리 쓰이는 8T2C LTPO 픽셀 구조는 기존 대비 필요한 GOA 신호의 종류가 많아져(5종류), 이로 인해 IC의 전력 소모가 크게 늘어나는 단점이 있습니다.</li>
-<li><strong>해결 방안:</strong> 연구진은 기존에 나뉘어 있던 Nscan GOA와 Pscan GOA 유닛을 단일 CMOS GOA 회로로 통합(Consolidate) 설계하여 패널 측면 베젤 폭을 75~100μm 축소시켰습니다.</li>
-<li><strong>효과:</strong> 통합된 회로에 주파수 분할 제어 기능을 적용함으로써 불필요한 구동 신호를 차단하여, IC 소비 전력을 120Hz 풀스크린 구동 시 8.36%, 1Hz 모드에서 9.29% 절감하는 데 성공했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>LTPO 구동 기술 고도화 위협:</strong> 모바일 및 IT용 프리미엄 디스플레이의 표준이 된 LTPO 기술에서, 중국 패널 업체(CSOT)가 회로 설계(GOA 통합 및 주파수 제어)만으로 전력 소모를 10% 가까이 줄이고 베젤 폭까지 한 단계 더 축소시킨 것은 기술적 완성도를 크게 높인 것입니다.</li>
-<li><strong>구동 회로 설계 벤치마킹 필요:</strong> 디스플레이 폼팩터(초슬림 베젤)와 배터리 소모는 고객사(스마트폰 제조사)가 가장 중요하게 보는 스펙입니다. 삼성디스플레이의 LTPO 패널 구동 구조와 비교하여, 이와 같은 GOA 레이아웃 최적화 및 주파수 분할 구동 방식의 차이점을 면밀히 분석하고 자사 기술 경쟁력(수율 및 신뢰성 포함) 강화에 반영해야 합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 56-1</h2>
+        <button onclick="copyThis('content-56-1')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-56-1" style="margin-top: 15px;">
+            <h1>56-1.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>The New CMOS GOA Circuit with Partitioned Frequency Division Function in AMOLED</p><h3>2. ???Huanxi Zhang, Xiaolei Zhang, Lei Wu, Shaojing Wu, Hong Fang, Zuomin Liao, Mingzhou Wu, Juncheng Xiao, Chao Dai</h3><h3>3. ?뚯냽</h3><p>Wuhan China Star Optoelectronics Semiconductor Display Technology Corporation (CSOT), Wuhan, China</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 CSOT媛 AMOLED ?⑤꼸, ?뱁엳 ?二쇳뙆 援щ룞???좊━??LTPO ?붿뒪?뚮젅?댁쓽 援щ룞 ?꾨젰怨?踰좎젮??以꾩씠湲??꾪빐 '二쇳뙆??遺꾪븷(Partitioned Frequency Division) 湲곕뒫??媛뽰텣 ?덈줈??CMOS GOA(Gate on Array) ?뚮줈'瑜??쒖븞???쇰Ц?낅땲??</li><li>**臾몄젣??** 理쒓렐 ?ㅻ쭏?명룿 ?깆뿉 ?먮━ ?곗씠??8T2C LTPO ?쎌? 援ъ“??湲곗〈 ?鍮??꾩슂??GOA ?좏샇??醫낅쪟媛 留롮븘??5醫낅쪟), ?대줈 ?명빐 IC???꾨젰 ?뚮え媛 ?ш쾶 ?섏뼱?섎뒗 ?⑥젏???덉뒿?덈떎.</li><li>**?닿껐 諛⑹븞:** ?곌뎄吏꾩? 湲곗〈???섎돇???덈뜕 Nscan GOA? Pscan GOA ?좊떅???⑥씪 CMOS GOA ?뚮줈濡??듯빀(Consolidate) ?ㅺ퀎?섏뿬 ?⑤꼸 痢〓㈃ 踰좎젮 ??쓣 75~100關m 異뺤냼?쒖섟?듬땲??</li><li>**?④낵:** ?듯빀???뚮줈??二쇳뙆??遺꾪븷 ?쒖뼱 湲곕뒫???곸슜?⑥쑝濡쒖뜥 遺덊븘?뷀븳 援щ룞 ?좏샇瑜?李⑤떒?섏뿬, IC ?뚮퉬 ?꾨젰??120Hz ??ㅽ겕由?援щ룞 ??8.36%, 1Hz 紐⑤뱶?먯꽌 9.29% ?덇컧?섎뒗 ???깃났?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**LTPO 援щ룞 湲곗닠 怨좊룄???꾪삊:** 紐⑤컮??諛?IT???꾨━誘몄뾼 ?붿뒪?뚮젅?댁쓽 ?쒖?????LTPO 湲곗닠?먯꽌, 以묎뎅 ?⑤꼸 ?낆껜(CSOT)媛 ?뚮줈 ?ㅺ퀎(GOA ?듯빀 諛?二쇳뙆???쒖뼱)留뚯쑝濡??꾨젰 ?뚮え瑜?10% 媛源뚯씠 以꾩씠怨?踰좎젮 ??퉴吏 ???④퀎 ??異뺤냼?쒗궓 寃껋? 湲곗닠???꾩꽦?꾨? ?ш쾶 ?믪씤 寃껋엯?덈떎.</li><li>**援щ룞 ?뚮줈 ?ㅺ퀎 踰ㅼ튂留덊궧 ?꾩슂:** ?붿뒪?뚮젅???쇳뙥??珥덉뒳由?踰좎젮)? 諛고꽣由??뚮え??怨좉컼???ㅻ쭏?명룿 ?쒖“??媛 媛??以묒슂?섍쾶 蹂대뒗 ?ㅽ럺?낅땲?? ?쇱꽦?붿뒪?뚮젅?댁쓽 LTPO ?⑤꼸 援щ룞 援ъ“? 鍮꾧탳?섏뿬, ?댁? 媛숈? GOA ?덉씠?꾩썐 理쒖쟻??諛?二쇳뙆??遺꾪븷 援щ룞 諛⑹떇??李⑥씠?먯쓣 硫대???遺꾩꽍?섍퀬 ?먯궗 湲곗닠 寃쎌웳???섏쑉 諛??좊ː???ы븿) 媛뺥솕??諛섏쁺?댁빞 ?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-56-2">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>56-2</h2>
-                <button class="btn btn-copy" onclick="copyText('content-56-2')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-56-2">
-                <h1>56-2.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Design Scheme of LTPS Pixel Circuit for Enhanced Threshold Compensation of Driving TFT</p>
-<h3>2. 저자</h3>
-<p>Qian Xu, Cong Liu, Binyan Wang, BO SHI, Yinglong Huang, Haijun Qiu</p>
-<h3>3. 소속</h3>
-<p>OLED Technology Department, Chengdu BOE Optoelectronic Technology Co., Ltd., Chengdu</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 BOE가 LTPS 구동 TFT의 화질 저하 원인인 '문턱전압(Vth) 편차'를 완벽하게 보상하기 위해 새로운 픽셀 회로 설계(LS-source-follower pixel)를 고안한 연구입니다.</li>
-<li><strong>원인 규명:</strong> 일반적으로 광차단막(Light-shield, LS)을 VDD와 같은 고정 전압에 연결하는 기존 방식은, 픽셀이 '전압 보상 단계'에서 '발광 단계'로 넘어갈 때 LS와 Source 노드 사이의 전위차(VLS-VS)가 변하게 만들어 문턱전압 자체를 수시로 변하게(Shift) 만들고, 결과적으로 완벽한 문턱전압 보상을 불가능하게 한다는 것을 실험적으로 증명했습니다.</li>
-<li><strong>해결 설계:</strong> 이를 해결하기 위해 구동 TFT의 LS 노드를 외부 고정 전압이 아닌 TFT의 Source 노드에 영구적으로 연결(Short)하는 'LS-source-follower' 픽셀 회로 구조를 제안했습니다.</li>
-<li>이 구조를 적용하면 전체 구동 사이클 내내 VLS-VS가 0으로 일정하게 유지되므로 문턱전압의 흔들림이 사라져, 이상적이고 완벽한 문턱전압 보상과 뛰어난 휘도 균일성(Uniformity)을 얻을 수 있습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>Mura(얼룩) 개선을 위한 픽셀 회로 설계 혁신:</strong> 문턱전압 보상 회로는 AMOLED 화질의 핵심입니다. BOE가 기존 보상 회로의 사각지대였던 '구동 단계 전환에 따른 바디 효과(Body effect) 및 Vth 변동' 현상을 정확히 짚어내고, LS 노드를 Source에 묶는 방식으로 해결한 것은 화질(특히 저계조 균일도)을 한 단계 끌어올릴 수 있는 날카로운 접근입니다.</li>
-<li><strong>특허 및 기술 적용 여부 검토 필요:</strong> 이와 유사한 픽셀 회로 보상 메커니즘을 삼성디스플레이의 LTPS 및 LTPO 설계에서도 채택하고 있는지 점검해야 하며, 화질 개선 경쟁에서 중국 업체가 앞서 나가지 않도록 내부 보상 회로 성능 비교 및 관련 우회/방어 특허 검토가 적극적으로 필요합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 56-2</h2>
+        <button onclick="copyThis('content-56-2')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-56-2" style="margin-top: 15px;">
+            <h1>56-2.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Design Scheme of LTPS Pixel Circuit for Enhanced Threshold Compensation of Driving TFT</p><h3>2. ???Qian Xu, Cong Liu, Binyan Wang, BO SHI, Yinglong Huang, Haijun Qiu</h3><h3>3. ?뚯냽</h3><p>OLED Technology Department, Chengdu BOE Optoelectronic Technology Co., Ltd., Chengdu</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 BOE媛 LTPS 援щ룞 TFT???붿쭏 ????먯씤??'臾명꽦?꾩븬(Vth) ?몄감'瑜??꾨꼍?섍쾶 蹂댁긽?섍린 ?꾪빐 ?덈줈???쎌? ?뚮줈 ?ㅺ퀎(LS-source-follower pixel)瑜?怨좎븞???곌뎄?낅땲??</li><li>**?먯씤 洹쒕챸:** ?쇰컲?곸쑝濡?愿묒감?⑤쭑(Light-shield, LS)??VDD? 媛숈? 怨좎젙 ?꾩븬???곌껐?섎뒗 湲곗〈 諛⑹떇?, ?쎌???'?꾩븬 蹂댁긽 ?④퀎'?먯꽌 '諛쒓킅 ?④퀎'濡??섏뼱媛???LS? Source ?몃뱶 ?ъ씠???꾩쐞李?VLS-VS)媛 蹂?섍쾶 留뚮뱾??臾명꽦?꾩븬 ?먯껜瑜??섏떆濡?蹂?섍쾶(Shift) 留뚮뱾怨? 寃곌낵?곸쑝濡??꾨꼍??臾명꽦?꾩븬 蹂댁긽??遺덇??ν븯寃??쒕떎??寃껋쓣 ?ㅽ뿕?곸쑝濡?利앸챸?덉뒿?덈떎.</li><li>**?닿껐 ?ㅺ퀎:** ?대? ?닿껐?섍린 ?꾪빐 援щ룞 TFT??LS ?몃뱶瑜??몃? 怨좎젙 ?꾩븬???꾨땶 TFT??Source ?몃뱶???곴뎄?곸쑝濡??곌껐(Short)?섎뒗 'LS-source-follower' ?쎌? ?뚮줈 援ъ“瑜??쒖븞?덉뒿?덈떎.</li><li>??援ъ“瑜??곸슜?섎㈃ ?꾩껜 援щ룞 ?ъ씠???대궡 VLS-VS媛 0?쇰줈 ?쇱젙?섍쾶 ?좎??섎?濡?臾명꽦?꾩븬???붾뱾由쇱씠 ?щ씪?? ?댁긽?곸씠怨??꾨꼍??臾명꽦?꾩븬 蹂댁긽怨??곗뼱???섎룄 洹좎씪??Uniformity)???살쓣 ???덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**Mura(?쇰）) 媛쒖꽑???꾪븳 ?쎌? ?뚮줈 ?ㅺ퀎 ?곸떊:** 臾명꽦?꾩븬 蹂댁긽 ?뚮줈??AMOLED ?붿쭏???듭떖?낅땲?? BOE媛 湲곗〈 蹂댁긽 ?뚮줈???ш컖吏????'援щ룞 ?④퀎 ?꾪솚???곕Ⅸ 諛붾뵒 ?④낵(Body effect) 諛?Vth 蹂?? ?꾩긽???뺥솗??吏싳뼱?닿퀬, LS ?몃뱶瑜?Source??臾띕뒗 諛⑹떇?쇰줈 ?닿껐??寃껋? ?붿쭏(?뱁엳 ?怨꾩“ 洹좎씪???????④퀎 ?뚯뼱?щ┫ ???덈뒗 ?좎뭅濡쒖슫 ?묎렐?낅땲??</li><li>**?뱁뿀 諛?湲곗닠 ?곸슜 ?щ? 寃???꾩슂:** ?댁? ?좎궗???쎌? ?뚮줈 蹂댁긽 硫붿빱?덉쬁???쇱꽦?붿뒪?뚮젅?댁쓽 LTPS 諛?LTPO ?ㅺ퀎?먯꽌??梨꾪깮?섍퀬 ?덈뒗吏 ?먭??댁빞 ?섎ŉ, ?붿쭏 媛쒖꽑 寃쎌웳?먯꽌 以묎뎅 ?낆껜媛 ?욎꽌 ?섍?吏 ?딅룄濡??대? 蹂댁긽 ?뚮줈 ?깅뒫 鍮꾧탳 諛?愿???고쉶/諛⑹뼱 ?뱁뿀 寃?좉? ?곴레?곸쑝濡??꾩슂?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-56-4">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>56-4</h2>
-                <button class="btn btn-copy" onclick="copyText('content-56-4')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-56-4">
-                <h1>56-4.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>An Embedded Gate Driver Architecture for Scalable Large-Area OLED Displays</p>
-<h3>2. 저자</h3>
-<p>Dahye Shim, Seok Gyu Hong, Soyoung Lee, Yong-Min Jeong, Eui-Hyun Chung, Chul Nam, Sanghoon Jung, Joonyoung Yang, Hyun Jae Kim</p>
-<h3>3. 소속</h3>
-<p>Yonsei University, Seoul, Korea</p>
-<p>LG Display, LG Science Park, Seoul, Korea</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>연세대학교와 LG디스플레이 연구진이 필러-투-필러(Pillar-to-Pillar) 크기의 <strong>차량용 초대형/이형 OLED 패널</strong>에서 발생하는 기술적 한계를 극복하기 위해 <strong>'임베디드 게이트 드라이버(Embedded Gate Driver)'</strong> 아키텍처를 제안한 논문입니다.</li>
-<li><strong>문제점:</strong> 화면 크기가 30인치, 50인치를 넘어서면 패널 테두리(Bezel)에 배치된 기존 게이트 드라이버(GIP) 구조로는 화면 중앙부까지 신호가 도달하는 데 심각한 지연(RC Delay)이 발생하여 구동 왜곡과 휘도 불균일이 초래됩니다.</li>
-<li><strong>해결 구조:</strong> 기존처럼 베젤에 게이트 드라이버를 몰아두지 않고, 게이트 드라이버 유닛을 <strong>패널 내부의 활성 픽셀 영역(Active Array) 사이사이에 분산 배치(Embed)하는 획기적인 구조</strong>를 고안했습니다.</li>
-<li>27인치 프로토타입 패널을 제작하여 검증한 결과, 패널 중심부와 외곽의 게이트 신호 지연 편차가 사실상 사라지고 상승/하강 속도(1~2μs)가 전 영역에서 일정하게 유지되는 등 픽셀 구동 균일도를 압도적으로 개선했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>차량용 디스플레이 주도권 확보를 위한 혁신 구조:</strong> 대화면 차량용 디스플레이 시장(콕핏 디스플레이 등)에서 베젤 제약을 풀고 자유로운 디자인(Free-form)과 균일한 화질을 보장하기 위해서는 기존 GIP 방식의 탈피가 필수적입니다. LGD가 이 개념을 선제적으로 구현하여 검증했다는 것은 모빌리티 패널 폼팩터 기술에서 앞서가려는 강한 시도입니다.</li>
-<li><strong>자사 초대형 기술 전략 수립 시급:</strong> 삼성디스플레이 역시 다가오는 프리미엄 차량용 초대형 OLED 턴키 시장 수주를 위해 패널 딜레이를 잡는 내부 구동 칩 분산(Embedded) 아키텍처에 대한 벤치마킹 및 구조/특허 우위(투명도, 개구율 손실 보정 방안 등) 선점 검토가 필수적입니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 56-4</h2>
+        <button onclick="copyThis('content-56-4')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-56-4" style="margin-top: 15px;">
+            <h1>56-4.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>An Embedded Gate Driver Architecture for Scalable Large-Area OLED Displays</p><h3>2. ???Dahye Shim, Seok Gyu Hong, Soyoung Lee, Yong-Min Jeong, Eui-Hyun Chung, Chul Nam, Sanghoon Jung, Joonyoung Yang, Hyun Jae Kim</h3><h3>3. ?뚯냽</h3><p>Yonsei University, Seoul, Korea</p><p>LG Display, LG Science Park, Seoul, Korea</p><h3>4. 二쇱슂?댁슜</h3><li>?곗꽭??숆탳? LG?붿뒪?뚮젅???곌뎄吏꾩씠 ?꾨윭-???꾨윭(Pillar-to-Pillar) ?ш린??**李⑤웾??珥덈????댄삎 OLED ?⑤꼸**?먯꽌 諛쒖깮?섎뒗 湲곗닠???쒓퀎瑜?洹밸났?섍린 ?꾪빐 **'?꾨쿋?붾뱶 寃뚯씠???쒕씪?대쾭(Embedded Gate Driver)'** ?꾪궎?띿쿂瑜??쒖븞???쇰Ц?낅땲??</li><li>**臾몄젣??** ?붾㈃ ?ш린媛 30?몄튂, 50?몄튂瑜??섏뼱?쒕㈃ ?⑤꼸 ?뚮몢由?Bezel)??諛곗튂??湲곗〈 寃뚯씠???쒕씪?대쾭(GIP) 援ъ“濡쒕뒗 ?붾㈃ 以묒븰遺源뚯? ?좏샇媛 ?꾨떖?섎뒗 ???ш컖??吏??RC Delay)??諛쒖깮?섏뿬 援щ룞 ?쒓끝怨??섎룄 遺덇퇏?쇱씠 珥덈옒?⑸땲??</li><li>**?닿껐 援ъ“:** 湲곗〈泥섎읆 踰좎젮??寃뚯씠???쒕씪?대쾭瑜?紐곗븘?먯? ?딄퀬, 寃뚯씠???쒕씪?대쾭 ?좊떅??**?⑤꼸 ?대????쒖꽦 ?쎌? ?곸뿭(Active Array) ?ъ씠?ъ씠??遺꾩궛 諛곗튂(Embed)?섎뒗 ?띻린?곸씤 援ъ“**瑜?怨좎븞?덉뒿?덈떎.</li><li>27?몄튂 ?꾨줈?좏????⑤꼸???쒖옉?섏뿬 寃利앺븳 寃곌낵, ?⑤꼸 以묒떖遺? ?멸낸??寃뚯씠???좏샇 吏???몄감媛 ?ъ떎???щ씪吏怨??곸듅/?섍컯 ?띾룄(1~2關s)媛 ???곸뿭?먯꽌 ?쇱젙?섍쾶 ?좎??섎뒗 ???쎌? 援щ룞 洹좎씪?꾨? ?뺣룄?곸쑝濡?媛쒖꽑?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**李⑤웾???붿뒪?뚮젅??二쇰룄沅??뺣낫瑜??꾪븳 ?곸떊 援ъ“:** ??붾㈃ 李⑤웾???붿뒪?뚮젅???쒖옣(肄뺥븦 ?붿뒪?뚮젅?????먯꽌 踰좎젮 ?쒖빟???怨??먯쑀濡쒖슫 ?붿옄??Free-form)怨?洹좎씪???붿쭏??蹂댁옣?섍린 ?꾪빐?쒕뒗 湲곗〈 GIP 諛⑹떇???덊뵾媛 ?꾩닔?곸엯?덈떎. LGD媛 ??媛쒕뀗???좎젣?곸쑝濡?援ы쁽?섏뿬 寃利앺뻽?ㅻ뒗 寃껋? 紐⑤퉴由ы떚 ?⑤꼸 ?쇳뙥??湲곗닠?먯꽌 ?욎꽌媛?ㅻ뒗 媛뺥븳 ?쒕룄?낅땲??</li><li>**?먯궗 珥덈???湲곗닠 ?꾨왂 ?섎┰ ?쒓툒:** ?쇱꽦?붿뒪?뚮젅????떆 ?ㅺ??ㅻ뒗 ?꾨━誘몄뾼 李⑤웾??珥덈???OLED ?댄궎 ?쒖옣 ?섏＜瑜??꾪빐 ?⑤꼸 ?쒕젅?대? ?〓뒗 ?대? 援щ룞 移?遺꾩궛(Embedded) ?꾪궎?띿쿂?????踰ㅼ튂留덊궧 諛?援ъ“/?뱁뿀 ?곗쐞(?щ챸?? 媛쒓뎄???먯떎 蹂댁젙 諛⑹븞 ?? ?좎젏 寃?좉? ?꾩닔?곸엯?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-72-1">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>72-1</h2>
-                <button class="btn btn-copy" onclick="copyText('content-72-1')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-72-1">
-                <h1>72-1.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Color Sequential Tandem Driving Method for Micro-LED Displays</p>
-<h3>2. 저자</h3>
-<p>Yu-Shen Huang, et al.</p>
-<h3>3. 소속</h3>
-<p>General Research Lab., PlayNitride Display Co., Ltd., Taiwan</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>대만의 Micro-LED 기술 선도 기업인 PlayNitride가 마이크로 LED 디스플레이의 소비 전력과 순간 피크 전류 부하를 획기적으로 줄이기 위해 <strong>'Color Sequential Tandem (CST)' 구동 방식</strong>을 제안한 논문입니다.</li>
-<li><strong>구동 원리:</strong> 하나의 이미지 프레임을 두 개의 서브프레임으로 나누어 구동하는 시간 분할(Color sequential) 방식과 소자의 다중 발광(Tandem) 특성을 결합했습니다. 각 서브프레임에서 서로 다른 배선의 발광 전류 재결합을 최적화하여 픽셀을 순차적으로 켭니다.</li>
-<li><strong>실험 결과:</strong> 모든 서브픽셀이 동시에 켜지는 기존 표준 RGB 구동 방식과 비교했을 때, CST 방식은 눈에 띄는 화질 저하, 색좌표의 틀어짐, 플리커 아티팩트 없이 <strong>구동 전류를 상황에 따라 10%에서 최대 33%까지 감소</strong>시키는 효과를 입증했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>마이크로 LED 소비전력 제어의 대안 제시:</strong> 초고휘도를 내는 차량용 HUD나 스마트 워치, AR 기기 등에서 마이크로 LED 패널의 순간적인 발열과 전력 소모(피크 전류)는 매우 중요한 해결 과제입니다. PlayNitride가 구동 칩셋/알고리즘 차원의 시분할 구동 방식을 적용해 전력을 30%나 아끼는 해법을 제안한 것은 흥미롭고 위협적인 접근입니다.</li>
-<li><strong>선행 연구 및 기술 도입 여부 모니터링:</strong> 마이크로 LED 패널을 차세대 먹거리로 키우는 삼성디스플레이 입장에서는, 이와 같은 Color Sequential 기반의 구동 전류 분산 기술이 자사의 백플레인 구동 솔루션에 응용될 수 있는지 검토하고, 전력 절감을 위한 소프트웨어/드라이버 기술 동향으로서 적극적인 모니터링을 할 필요가 있습니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 72-1</h2>
+        <button onclick="copyThis('content-72-1')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-72-1" style="margin-top: 15px;">
+            <h1>72-1.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Color Sequential Tandem Driving Method for Micro-LED Displays</p><h3>2. ???Yu-Shen Huang, et al.</h3><h3>3. ?뚯냽</h3><p>General Research Lab., PlayNitride Display Co., Ltd., Taiwan</p><h3>4. 二쇱슂?댁슜</h3><li>?留뚯쓽 Micro-LED 湲곗닠 ?좊룄 湲곗뾽??PlayNitride媛 留덉씠?щ줈 LED ?붿뒪?뚮젅?댁쓽 ?뚮퉬 ?꾨젰怨??쒓컙 ?쇳겕 ?꾨쪟 遺?섎? ?띻린?곸쑝濡?以꾩씠湲??꾪빐 **'Color Sequential Tandem (CST)' 援щ룞 諛⑹떇**???쒖븞???쇰Ц?낅땲??</li><li>**援щ룞 ?먮━:** ?섎굹???대?吏 ?꾨젅?꾩쓣 ??媛쒖쓽 ?쒕툕?꾨젅?꾩쑝濡??섎늻??援щ룞?섎뒗 ?쒓컙 遺꾪븷(Color sequential) 諛⑹떇怨??뚯옄???ㅼ쨷 諛쒓킅(Tandem) ?뱀꽦??寃고빀?덉뒿?덈떎. 媛??쒕툕?꾨젅?꾩뿉???쒕줈 ?ㅻⅨ 諛곗꽑??諛쒓킅 ?꾨쪟 ?ш껐?⑹쓣 理쒖쟻?뷀븯???쎌????쒖감?곸쑝濡?耳?땲??</li><li>**?ㅽ뿕 寃곌낵:** 紐⑤뱺 ?쒕툕?쎌????숈떆??耳쒖???湲곗〈 ?쒖? RGB 援щ룞 諛⑹떇怨?鍮꾧탳?덉쓣 ?? CST 諛⑹떇? ?덉뿉 ?꾨뒗 ?붿쭏 ??? ?됱쥖?쒖쓽 ??댁쭚, ?뚮━而??꾪떚?⑺듃 ?놁씠 **援щ룞 ?꾨쪟瑜??곹솴???곕씪 10%?먯꽌 理쒕? 33%源뚯? 媛먯냼**?쒗궎???④낵瑜??낆쬆?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**留덉씠?щ줈 LED ?뚮퉬?꾨젰 ?쒖뼱??????쒖떆:** 珥덇퀬?섎룄瑜??대뒗 李⑤웾??HUD???ㅻ쭏???뚯튂, AR 湲곌린 ?깆뿉??留덉씠?щ줈 LED ?⑤꼸???쒓컙?곸씤 諛쒖뿴怨??꾨젰 ?뚮え(?쇳겕 ?꾨쪟)??留ㅼ슦 以묒슂???닿껐 怨쇱젣?낅땲?? PlayNitride媛 援щ룞 移⑹뀑/?뚭퀬由ъ쬁 李⑥썝???쒕텇??援щ룞 諛⑹떇???곸슜???꾨젰??30%???꾨겮???대쾿???쒖븞??寃껋? ?λ?濡?퀬 ?꾪삊?곸씤 ?묎렐?낅땲??</li><li>**?좏뻾 ?곌뎄 諛?湲곗닠 ?꾩엯 ?щ? 紐⑤땲?곕쭅:** 留덉씠?щ줈 LED ?⑤꼸??李⑥꽭? 癒밴굅由щ줈 ?ㅼ슦???쇱꽦?붿뒪?뚮젅???낆옣?먯꽌?? ?댁? 媛숈? Color Sequential 湲곕컲??援щ룞 ?꾨쪟 遺꾩궛 湲곗닠???먯궗??諛깊뵆?덉씤 援щ룞 ?붾（?섏뿉 ?묒슜?????덈뒗吏 寃?좏븯怨? ?꾨젰 ?덇컧???꾪븳 ?뚰봽?몄썾???쒕씪?대쾭 湲곗닠 ?숉뼢?쇰줈???곴레?곸씤 紐⑤땲?곕쭅?????꾩슂媛 ?덉뒿?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-72-2">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>72-2</h2>
-                <button class="btn btn-copy" onclick="copyText('content-72-2')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-72-2">
-                <h1>72-2.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Eutectic-Free MicroLED and OTFT Integration: A Scalable Solution Across Display Generations</p>
-<h3>2. 저자</h3>
-<p>Chia-Hung Tsai, Simon Ogier, Doil Kim, Fang-Chung Chen, Hao-Chung Kuo</p>
-<h3>3. 소속</h3>
-<p>National Yang Ming Chiao Tung University, Hsinchu 30010, Taiwan</p>
-<p>Smartkem Limited, Hexagon Tower, Blackley, Manchester, M9 8GQ, UK</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>마이크로 LED 디스플레이 제조의 최대 난제인 전사(Transfer), 공융 결합(Eutectic bonding), 불량 화소 수리(Repair) 공정을 제거하기 위한 새로운 '칩-퍼스트(Chip-first)' 통합 전략을 제안한 논문입니다.</li>
-<li><strong>공정 혁신:</strong> 기존처럼 백플레인을 먼저 만들고 칩을 올리는 방식이 아니라, 투명하고 유연한 플라스틱(PEN) 기판 위에 마이크로 LED 칩을 먼저 배치하고, 그 위에 120°C 이하의 저온 공정으로 유기 박막 트랜지스터(OTFT) 백플레인을 형성했습니다.</li>
-<li><strong>연결 신뢰성 확보:</strong> 수만 개의 마이크로 LED와 OTFT 회로 간의 전기적 연결을 까다로운 레이저 본딩이나 금속 범프 본딩이 아닌 반도체 사진식각(Photolithography) 기반의 비아(Via) 홀과 메탈 스퍼터링으로 일괄 형성하여 99.99% 이상의 압도적인 연결 수율을 확보했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>마이크로 LED 공정의 패러다임 전환 가능성:</strong> 비용과 수율 면에서 최악의 병목인 공융 결합 공정과 레이저 수리 공정을 반도체 배선 공정으로 대체할 수 있다는 것은 혁신적인 원가 절감 아이디어입니다.</li>
-<li><strong>저온 공정 연계 기술 벤치마킹 필요:</strong> 고온 공정을 버티지 못하는 마이크로 LED를 감안하여 OTFT라는 저온 구동 소자를 융합한 것은, 향후 투명/유연 마이크로 LED 폼팩터 확장에 중요한 시사점을 줍니다. 삼성디스플레이의 무기물 기반 백플레인 기술 로드맵 외에도 이러한 저온 유기물 기반 백플레인 공정의 확장 가능성을 기술적으로 검토할 필요가 있습니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 72-2</h2>
+        <button onclick="copyThis('content-72-2')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-72-2" style="margin-top: 15px;">
+            <h1>72-2.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Eutectic-Free MicroLED and OTFT Integration: A Scalable Solution Across Display Generations</p><h3>2. ???Chia-Hung Tsai, Simon Ogier, Doil Kim, Fang-Chung Chen, Hao-Chung Kuo</h3><h3>3. ?뚯냽</h3><p>National Yang Ming Chiao Tung University, Hsinchu 30010, Taiwan</p><p>Smartkem Limited, Hexagon Tower, Blackley, Manchester, M9 8GQ, UK</p><h3>4. 二쇱슂?댁슜</h3><li>留덉씠?щ줈 LED ?붿뒪?뚮젅???쒖“??理쒕? ?쒖젣???꾩궗(Transfer), 怨듭쑖 寃고빀(Eutectic bonding), 遺덈웾 ?붿냼 ?섎━(Repair) 怨듭젙???쒓굅?섍린 ?꾪븳 ?덈줈??'移??쇱뒪??Chip-first)' ?듯빀 ?꾨왂???쒖븞???쇰Ц?낅땲??</li><li>**怨듭젙 ?곸떊:** 湲곗〈泥섎읆 諛깊뵆?덉씤??癒쇱? 留뚮뱾怨?移⑹쓣 ?щ━??諛⑹떇???꾨땲?? ?щ챸?섍퀬 ?좎뿰???뚮씪?ㅽ떛(PEN) 湲고뙋 ?꾩뿉 留덉씠?щ줈 LED 移⑹쓣 癒쇱? 諛곗튂?섍퀬, 洹??꾩뿉 120째C ?댄븯?????怨듭젙?쇰줈 ?좉린 諛뺣쭑 ?몃옖吏?ㅽ꽣(OTFT) 諛깊뵆?덉씤???뺤꽦?덉뒿?덈떎.</li><li>**?곌껐 ?좊ː???뺣낫:** ?섎쭔 媛쒖쓽 留덉씠?щ줈 LED? OTFT ?뚮줈 媛꾩쓽 ?꾧린???곌껐??源뚮떎濡쒖슫 ?덉씠? 蹂몃뵫?대굹 湲덉냽 踰뷀봽 蹂몃뵫???꾨땶 諛섎룄泥??ъ쭊?앷컖(Photolithography) 湲곕컲??鍮꾩븘(Via) ?怨?硫뷀깉 ?ㅽ띁?곕쭅?쇰줈 ?쇨큵 ?뺤꽦?섏뿬 99.99% ?댁긽???뺣룄?곸씤 ?곌껐 ?섏쑉???뺣낫?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**留덉씠?щ줈 LED 怨듭젙???⑤윭?ㅼ엫 ?꾪솚 媛?μ꽦:** 鍮꾩슜怨??섏쑉 硫댁뿉??理쒖븙??蹂묐ぉ??怨듭쑖 寃고빀 怨듭젙怨??덉씠? ?섎━ 怨듭젙??諛섎룄泥?諛곗꽑 怨듭젙?쇰줈 ?泥댄븷 ???덈떎??寃껋? ?곸떊?곸씤 ?먭? ?덇컧 ?꾩씠?붿뼱?낅땲??</li><li>**???怨듭젙 ?곌퀎 湲곗닠 踰ㅼ튂留덊궧 ?꾩슂:** 怨좎삩 怨듭젙??踰꾪떚吏 紐삵븯??留덉씠?щ줈 LED瑜?媛먯븞?섏뿬 OTFT?쇰뒗 ???援щ룞 ?뚯옄瑜??듯빀??寃껋?, ?ν썑 ?щ챸/?좎뿰 留덉씠?щ줈 LED ?쇳뙥???뺤옣??以묒슂???쒖궗?먯쓣 以띾땲?? ?쇱꽦?붿뒪?뚮젅?댁쓽 臾닿린臾?湲곕컲 諛깊뵆?덉씤 湲곗닠 濡쒕뱶留??몄뿉???대윭??????좉린臾?湲곕컲 諛깊뵆?덉씤 怨듭젙???뺤옣 媛?μ꽦??湲곗닠?곸쑝濡?寃?좏븷 ?꾩슂媛 ?덉뒿?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-74-3">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>74-3</h2>
-                <button class="btn btn-copy" onclick="copyText('content-74-3')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-74-3">
-                <h1>74-3.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>8.3-inch 1058-ppi Crystal Indium Oxide Display with Side-by-side Method Using Fine Metal Mask and Partition Wall Dividing OLED between Sub-pixels</p>
-<h3>2. 저자</h3>
-<p>Shingo Eguchi, Tomoya Aoyama, Sho Kato, Takayuki Oide, Seiko Inoue, Sachiko Yamagata, Daisuke Kubota, Koji Kusunoki, Satoru Idojiri, Yasutaka Nakazawa, Rai Sato and Shunpei Yamazaki</p>
-<h3>3. 소속</h3>
-<p>Semiconductor Energy Laboratory Co., Ltd. (SEL), Kanagawa, Japan</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>일본 SEL이 고가의 반도체 노광 공정(MML 등) 없이 기존 파인 메탈 마스크(FMM) 기반 진공 증착 설비만으로 1000 ppi를 초과하는 고해상도 OLED 디스플레이를 제작하는 'SFM2' 기술을 발표했습니다.</li>
-<li><strong>구조적 혁신 (격벽 도입):</strong> 서브픽셀 사이의 혼색을 막기 위해 픽셀 정의막 위에 역상(inverted) 또는 역테이퍼 형태의 '절연 격벽(Partition wall)'을 세워, 증착되는 유기막과 음극(Cathode)을 물리적으로 분리시켰습니다.</li>
-<li><strong>OCTILE 픽셀 배열:</strong> 동일한 색상의 4개 서브픽셀을 하나로 묶어 FMM의 단일 개구부로 증착하는 독창적인 'OCTILE' 픽셀 배열 방식을 적용해 FMM 공정 여유도를 10µm 이상으로 크게 넓혔습니다.</li>
-<li>이 기술을 통해 수정 산화인듐(Crystal IO) 백플레인 기반의 8.3인치 1058 ppi 8K 해상도 패널을 시연하였으며, 특유의 고밀도 화소가 렌즈 없이도 3D 입체감(Natural 3D)을 부여함을 확인했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>초고해상도 패터닝의 새로운 원가 절감 대안:</strong> IT나 VR용 고해상도 OLED 시장에서 1000 ppi 이상을 달성하기 위해 OLEDoS나 초정밀 FMM 투자가 거론되는 상황에서, 기존 증착 인프라를 그대로 재활용하면서 격벽과 픽셀 재배열 꼼수(?)만으로 한계를 돌파한 것은 획기적인 양산성 혁신입니다.</li>
-<li><strong>특허 및 우회 기술 분석 시급:</strong> 삼성디스플레이가 추구하는 RGB 직접 패터닝 기술(e-LEAP이나 MML 등) 대비 설비 투자비가 파격적으로 저렴할 수 있습니다. 이 기술의 수율과 구동 수명을 면밀히 분석하고, OCTILE 배열이나 격벽 활용에 대한 선행 특허 방어망 구축이 절실합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 74-3</h2>
+        <button onclick="copyThis('content-74-3')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-74-3" style="margin-top: 15px;">
+            <h1>74-3.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>8.3-inch 1058-ppi Crystal Indium Oxide Display with Side-by-side Method Using Fine Metal Mask and Partition Wall Dividing OLED between Sub-pixels</p><h3>2. ???Shingo Eguchi, Tomoya Aoyama, Sho Kato, Takayuki Oide, Seiko Inoue, Sachiko Yamagata, Daisuke Kubota, Koji Kusunoki, Satoru Idojiri, Yasutaka Nakazawa, Rai Sato and Shunpei Yamazaki</h3><h3>3. ?뚯냽</h3><p>Semiconductor Energy Laboratory Co., Ltd. (SEL), Kanagawa, Japan</p><h3>4. 二쇱슂?댁슜</h3><li>?쇰낯 SEL??怨좉???諛섎룄泥??멸킅 怨듭젙(MML ?? ?놁씠 湲곗〈 ?뚯씤 硫뷀깉 留덉뒪??FMM) 湲곕컲 吏꾧났 利앹갑 ?ㅻ퉬留뚯쑝濡?1000 ppi瑜?珥덇낵?섎뒗 怨좏빐?곷룄 OLED ?붿뒪?뚮젅?대? ?쒖옉?섎뒗 'SFM2' 湲곗닠??諛쒗몴?덉뒿?덈떎.</li><li>**援ъ“???곸떊 (寃⑸꼍 ?꾩엯):** ?쒕툕?쎌? ?ъ씠???쇱깋??留됯린 ?꾪빐 ?쎌? ?뺤쓽留??꾩뿉 ??긽(inverted) ?먮뒗 ??뀒?댄띁 ?뺥깭??'?덉뿰 寃⑸꼍(Partition wall)'???몄썙, 利앹갑?섎뒗 ?좉린留됯낵 ?뚭레(Cathode)??臾쇰━?곸쑝濡?遺꾨━?쒖섟?듬땲??</li><li>**OCTILE ?쎌? 諛곗뿴:** ?숈씪???됱긽??4媛??쒕툕?쎌????섎굹濡?臾띠뼱 FMM???⑥씪 媛쒓뎄遺濡?利앹갑?섎뒗 ?낆갹?곸씤 'OCTILE' ?쎌? 諛곗뿴 諛⑹떇???곸슜??FMM 怨듭젙 ?ъ쑀?꾨? 10쨉m ?댁긽?쇰줈 ?ш쾶 ?볧삍?듬땲??</li><li>??湲곗닠???듯빐 ?섏젙 ?고솕?몃뱪(Crystal IO) 諛깊뵆?덉씤 湲곕컲??8.3?몄튂 1058 ppi 8K ?댁긽???⑤꼸???쒖뿰?섏??쇰ŉ, ?뱀쑀??怨좊????붿냼媛 ?뚯쫰 ?놁씠??3D ?낆껜媛?Natural 3D)??遺?ы븿???뺤씤?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**珥덇퀬?댁긽???⑦꽣?앹쓽 ?덈줈???먭? ?덇컧 ???** IT??VR??怨좏빐?곷룄 OLED ?쒖옣?먯꽌 1000 ppi ?댁긽???ъ꽦?섍린 ?꾪빐 OLEDoS??珥덉젙諛 FMM ?ъ옄媛 嫄곕줎?섎뒗 ?곹솴?먯꽌, 湲곗〈 利앹갑 ?명봽?쇰? 洹몃?濡??ы솢?⑺븯硫댁꽌 寃⑸꼍怨??쎌? ?щ같??瑗쇱닔(?)留뚯쑝濡??쒓퀎瑜??뚰뙆??寃껋? ?띻린?곸씤 ?묒궛???곸떊?낅땲??</li><li>**?뱁뿀 諛??고쉶 湲곗닠 遺꾩꽍 ?쒓툒:** ?쇱꽦?붿뒪?뚮젅?닿? 異붽뎄?섎뒗 RGB 吏곸젒 ?⑦꽣??湲곗닠(e-LEAP?대굹 MML ?? ?鍮??ㅻ퉬 ?ъ옄鍮꾧? ?뚭꺽?곸쑝濡???댄븷 ???덉뒿?덈떎. ??湲곗닠???섏쑉怨?援щ룞 ?섎챸??硫대???遺꾩꽍?섍퀬, OCTILE 諛곗뿴?대굹 寃⑸꼍 ?쒖슜??????좏뻾 ?뱁뿀 諛⑹뼱留?援ъ텞???덉떎?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-91-1">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>91-1</h2>
-                <button class="btn btn-copy" onclick="copyText('content-91-1')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-91-1">
-                <h1>91-1.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Breaking the Under-Display Camera’s Dilemma Between Diffraction and Pixel Density Using Incoherent Pupil Synthesis</p>
-<h3>2. 저자</h3>
-<p>Xinni Xie, Qimeng Wang, Yi Liu, Bo-Ru Yang, and Zong Qin</p>
-<h3>3. 소속</h3>
-<p>School of Electronic and Information Technology, Sun Yat-Sen University, Guangzhou, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>스마트폰 화면 밑 카메라(UDC, Under-Display Camera)에서 불가피한 딜레마인 '디스플레이 픽셀 밀도 증가에 따른 빛의 회절(Diffraction) 심화' 문제를 광학적으로 해결하기 위한 기술 제안입니다.</li>
-<li><strong>해결 원리 (Incoherent Pupil Synthesis):</strong> 카메라 렌즈의 개구부(Pupil)를 직교 편광자나 상호보완적 필터를 이용해 서로 간섭하지 않는 여러 구역으로 나눕니다.</li>
-<li>나뉜 개구부 구역들에 각각 수직/수평이 엇갈린 상보적인 투과형 픽셀 레이아웃을 배치합니다. 이후 카메라가 획득한 이미지를 비간섭적으로 합성하면, 낮은 개구율(12%) 구조가 필연적으로 만들어내는 광학전달함수(OTF) 상의 계곡(정보 소실 구간)이 서로 채워지며 메워집니다.</li>
-<li>결과적으로 높은 픽셀 밀도(300 ppi 이상)의 디스플레이를 유지하면서도 이미지 복원이 훨씬 쉬워져 화질 열화가 없는 선명한 UDC 구현이 가능함을 입증했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>UPC 화질 개선의 새로운 광학적 접근 방식:</strong> 현재 삼성전자 등 플래그십 스마트폰에 탑재되는 UPC(Under Panel Camera) 기술은 패널 측의 투과창 확보와 SW(AI) 복원에 주로 의존하고 있습니다. 중국 연구진이 렌즈 측면의 광학 필터 설계와 패널 픽셀 설계를 연동하여 회절의 근본 원인을 없애는 융합 설계를 내놓은 것은 인상적입니다.</li>
-<li><strong>카메라 모듈 제조사와의 협력 설계 도출 필요:</strong> 패널 레이아웃 자체를 카메라 렌즈의 편광 분할과 맞물려 디자인하는 이 기법은 향후 프리미엄 스마트폰 UPC 시장에서 화질 우위를 가르는 핵심이 될 수 있으므로, 세트/렌즈 메이커와의 공동 설계 특허 동향 파악이 필요합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 91-1</h2>
+        <button onclick="copyThis('content-91-1')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-91-1" style="margin-top: 15px;">
+            <h1>91-1.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Breaking the Under-Display Camera?셲 Dilemma Between Diffraction and Pixel Density Using Incoherent Pupil Synthesis</p><h3>2. ???Xinni Xie, Qimeng Wang, Yi Liu, Bo-Ru Yang, and Zong Qin</h3><h3>3. ?뚯냽</h3><p>School of Electronic and Information Technology, Sun Yat-Sen University, Guangzhou, China</p><h3>4. 二쇱슂?댁슜</h3><li>?ㅻ쭏?명룿 ?붾㈃ 諛?移대찓??UDC, Under-Display Camera)?먯꽌 遺덇??쇳븳 ?쒕젅留덉씤 '?붿뒪?뚮젅???쎌? 諛??利앷????곕Ⅸ 鍮쏆쓽 ?뚯젅(Diffraction) ?ы솕' 臾몄젣瑜?愿묓븰?곸쑝濡??닿껐?섍린 ?꾪븳 湲곗닠 ?쒖븞?낅땲??</li><li>**?닿껐 ?먮━ (Incoherent Pupil Synthesis):** 移대찓???뚯쫰??媛쒓뎄遺(Pupil)瑜?吏곴탳 ?멸킅?먮굹 ?곹샇蹂댁셿???꾪꽣瑜??댁슜???쒕줈 媛꾩꽠?섏? ?딅뒗 ?щ윭 援ъ뿭?쇰줈 ?섎닏?덈떎.</li><li>?섎돏 媛쒓뎄遺 援ъ뿭?ㅼ뿉 媛곴컖 ?섏쭅/?섑룊???뉕컝由??곷낫?곸씤 ?ш낵???쎌? ?덉씠?꾩썐??諛곗튂?⑸땲?? ?댄썑 移대찓?쇨? ?띾뱷???대?吏瑜?鍮꾧컙??쟻?쇰줈 ?⑹꽦?섎㈃, ??? 媛쒓뎄??12%) 援ъ“媛 ?꾩뿰?곸쑝濡?留뚮뱾?대궡??愿묓븰?꾨떖?⑥닔(OTF) ?곸쓽 怨꾧끝(?뺣낫 ?뚯떎 援ш컙)???쒕줈 梨꾩썙吏硫?硫붿썙吏묐땲??</li><li>寃곌낵?곸쑝濡??믪? ?쎌? 諛??300 ppi ?댁긽)???붿뒪?뚮젅?대? ?좎??섎㈃?쒕룄 ?대?吏 蹂듭썝???⑥뵮 ?ъ썙???붿쭏 ?댄솕媛 ?녿뒗 ?좊챸??UDC 援ы쁽??媛?ν븿???낆쬆?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**UPC ?붿쭏 媛쒖꽑???덈줈??愿묓븰???묎렐 諛⑹떇:** ?꾩옱 ?쇱꽦?꾩옄 ???뚮옒洹몄떗 ?ㅻ쭏?명룿???묒옱?섎뒗 UPC(Under Panel Camera) 湲곗닠? ?⑤꼸 痢≪쓽 ?ш낵李??뺣낫? SW(AI) 蹂듭썝??二쇰줈 ?섏〈?섍퀬 ?덉뒿?덈떎. 以묎뎅 ?곌뎄吏꾩씠 ?뚯쫰 痢〓㈃??愿묓븰 ?꾪꽣 ?ㅺ퀎? ?⑤꼸 ?쎌? ?ㅺ퀎瑜??곕룞?섏뿬 ?뚯젅??洹쇰낯 ?먯씤???놁븷???듯빀 ?ㅺ퀎瑜??대넃? 寃껋? ?몄긽?곸엯?덈떎.</li><li>**移대찓??紐⑤뱢 ?쒖“?ъ????묐젰 ?ㅺ퀎 ?꾩텧 ?꾩슂:** ?⑤꼸 ?덉씠?꾩썐 ?먯껜瑜?移대찓???뚯쫰???멸킅 遺꾪븷怨?留욌Ъ???붿옄?명븯????湲곕쾿? ?ν썑 ?꾨━誘몄뾼 ?ㅻ쭏?명룿 UPC ?쒖옣?먯꽌 ?붿쭏 ?곗쐞瑜?媛瑜대뒗 ?듭떖???????덉쑝誘濡? ?명듃/?뚯쫰 硫붿씠而ㅼ???怨듬룞 ?ㅺ퀎 ?뱁뿀 ?숉뼢 ?뚯븙???꾩슂?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-91-2">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>91-2</h2>
-                <button class="btn btn-copy" onclick="copyText('content-91-2')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-91-2">
-                <h1>91-2.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>A New Design for CUP to Reduce Reflection and Diffraction Based on LTPO and CFOT</p>
-<h3>2. 저자</h3>
-<p>Chong Qian, Siyu Chen, Ye Jin, Qing He, Fengsheng Lu, Shuangying Cao</p>
-<h3>3. 소속</h3>
-<p>Tianma Micro-Electronics Co., Ltd., Shanghai, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 Tianma에서 스마트폰(특히 폴더블폰)에 주로 쓰이는 고사양 LTPO 및 CFOT(Color Filter On TPOT) 기반의 화면 밑 카메라(CUP/UPC) 패널이 겪는 빛 반사와 회절, 시인성 문제를 극복하기 위한 신규 픽셀 설계를 제시했습니다.</li>
-<li><strong>링 형태의 Mura 제거:</strong> 카메라 영역(CUP)과 일반 영역 간의 Black Matrix(BM) 밀도 차이로 인해 그 위에 코팅되는 CF 두께가 달라져 링 모양의 얼룩이 생기는 현상을 발견하고, BM이 없는 빈 공간을 투명한 오버코트(OC)로 채워 두께를 균일하게 맞춰 얼룩을 제거했습니다.</li>
-<li><strong>빛 반사율 대폭 축소:</strong> 카메라 영역의 투과율을 높이기 위해 음극(Cathode)을 제거하면 외부 조명 반사율이 21%까지 치솟아 맨눈에 픽셀이 튀어 보이는 현상이 발생합니다. 이에 회색(Gray) OC 흡수층과 특정 음극 패턴을 혼합 적용해 빛 반사율을 일반 디스플레이 영역(5.7%)과 거의 유사한 7.5%까지 끌어내렸습니다.</li>
-<li>카메라 영역 가장자리의 색 변이 방지를 위한 4x4 픽셀 배열 채택과, 고르지 못한 ITO 배선 길이를 뱀 모양(Serpentine) 패턴으로 보상하여 휘도 균일도를 향상시켰습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>중국 업체의 UPC 상용화 품질 급상승:</strong> CFOT 기반의 LTPO 폴더블 패널에서 UPC를 자연스럽게 구현하는 것은 극한의 공정 제어가 필요합니다. Tianma가 카메라 구역과 일반 구역의 광학적 단차, 반사율 차이, 배선 저항 차이 등 양산 과정의 디테일한 문제들을 꼼꼼하게 해결해 낸 엔지니어링 성과입니다.</li>
-<li><strong>자사 폴더블 UPC 기술력 방어 필요:</strong> 삼성디스플레이가 개척한 UPC 디스플레이 기술에서 중국 업체들이 화질 튜닝 및 눈에 띄지 않는 카메라 감추기(시인성 최적화) 기술을 턱밑까지 쫓아왔음을 의미하므로, 경쟁사의 UPC 광학 층 제어 구조에 대한 모니터링이 필요합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 91-2</h2>
+        <button onclick="copyThis('content-91-2')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-91-2" style="margin-top: 15px;">
+            <h1>91-2.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>A New Design for CUP to Reduce Reflection and Diffraction Based on LTPO and CFOT</p><h3>2. ???Chong Qian, Siyu Chen, Ye Jin, Qing He, Fengsheng Lu, Shuangying Cao</h3><h3>3. ?뚯냽</h3><p>Tianma Micro-Electronics Co., Ltd., Shanghai, China</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 Tianma?먯꽌 ?ㅻ쭏?명룿(?뱁엳 ?대뜑釉뷀룿)??二쇰줈 ?곗씠??怨좎궗??LTPO 諛?CFOT(Color Filter On TPOT) 湲곕컲???붾㈃ 諛?移대찓??CUP/UPC) ?⑤꼸??寃る뒗 鍮?諛섏궗? ?뚯젅, ?쒖씤??臾몄젣瑜?洹밸났?섍린 ?꾪븳 ?좉퇋 ?쎌? ?ㅺ퀎瑜??쒖떆?덉뒿?덈떎.</li><li>**留??뺥깭??Mura ?쒓굅:** 移대찓???곸뿭(CUP)怨??쇰컲 ?곸뿭 媛꾩쓽 Black Matrix(BM) 諛??李⑥씠濡??명빐 洹??꾩뿉 肄뷀똿?섎뒗 CF ?먭퍡媛 ?щ씪??留?紐⑥뼇???쇰）???앷린???꾩긽??諛쒓껄?섍퀬, BM???녿뒗 鍮?怨듦컙???щ챸???ㅻ쾭肄뷀듃(OC)濡?梨꾩썙 ?먭퍡瑜?洹좎씪?섍쾶 留욎떠 ?쇰）???쒓굅?덉뒿?덈떎.</li><li>**鍮?諛섏궗?????異뺤냼:** 移대찓???곸뿭???ш낵?⑥쓣 ?믪씠湲??꾪빐 ?뚭레(Cathode)???쒓굅?섎㈃ ?몃? 議곕챸 諛섏궗?⑥씠 21%源뚯? 移섏넖??留⑤늿???쎌??????蹂댁씠???꾩긽??諛쒖깮?⑸땲?? ?댁뿉 ?뚯깋(Gray) OC ?≪닔痢듦낵 ?뱀젙 ?뚭레 ?⑦꽩???쇳빀 ?곸슜??鍮?諛섏궗?⑥쓣 ?쇰컲 ?붿뒪?뚮젅???곸뿭(5.7%)怨?嫄곗쓽 ?좎궗??7.5%源뚯? ?뚯뼱?대졇?듬땲??</li><li>移대찓???곸뿭 媛?μ옄由ъ쓽 ??蹂??諛⑹?瑜??꾪븳 4x4 ?쎌? 諛곗뿴 梨꾪깮怨? 怨좊Ⅴ吏 紐삵븳 ITO 諛곗꽑 湲몄씠瑜?諭 紐⑥뼇(Serpentine) ?⑦꽩?쇰줈 蹂댁긽?섏뿬 ?섎룄 洹좎씪?꾨? ?μ긽?쒖섟?듬땲??</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**以묎뎅 ?낆껜??UPC ?곸슜???덉쭏 湲됱긽??** CFOT 湲곕컲??LTPO ?대뜑釉??⑤꼸?먯꽌 UPC瑜??먯뿰?ㅻ읇寃?援ы쁽?섎뒗 寃껋? 洹뱁븳??怨듭젙 ?쒖뼱媛 ?꾩슂?⑸땲?? Tianma媛 移대찓??援ъ뿭怨??쇰컲 援ъ뿭??愿묓븰???⑥감, 諛섏궗??李⑥씠, 諛곗꽑 ???李⑥씠 ???묒궛 怨쇱젙???뷀뀒?쇳븳 臾몄젣?ㅼ쓣 瑗쇨세?섍쾶 ?닿껐?????붿??덉뼱留??깃낵?낅땲??</li><li>**?먯궗 ?대뜑釉?UPC 湲곗닠??諛⑹뼱 ?꾩슂:** ?쇱꽦?붿뒪?뚮젅?닿? 媛쒖쿃??UPC ?붿뒪?뚮젅??湲곗닠?먯꽌 以묎뎅 ?낆껜?ㅼ씠 ?붿쭏 ?쒕떇 諛??덉뿉 ?꾩? ?딅뒗 移대찓??媛먯텛湲??쒖씤??理쒖쟻?? 湲곗닠???깅컩源뚯? 已볦븘?붿쓬???섎??섎?濡? 寃쎌웳?ъ쓽 UPC 愿묓븰 痢??쒖뼱 援ъ“?????紐⑤땲?곕쭅???꾩슂?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-91-3">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>91-3</h2>
-                <button class="btn btn-copy" onclick="copyText('content-91-3')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-91-3">
-                <h1>91-3.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Drive Circuit and Optical Co-Design for High-Performance Under-Display Infrared Recognition</p>
-<h3>2. 저자</h3>
-<p>Miao Chang, Lifang Wang, Xingxing Yang, Hongsen Zhang, Qinggang Liu</p>
-<h3>3. 소속</h3>
-<p>Hefei Govisionox Technology Co., Ltd. (Visionox’s Affiliated Company), Hefei, Anhui, China</p>
-<p>Visionox Technology Inc., Kunshan, Jiangsu, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 Visionox에서 화면 밑 적외선(IR) 얼굴 인식 및 제스처 센싱(UD IR)의 인식률을 높이기 위해, 디스플레이 구동 회로와 광학적 렌즈 설계를 동시에 최적화하는 <strong>공동 설계(Co-design) 방안</strong>을 발표한 논문입니다.</li>
-<li><strong>형태 최적화:</strong> 기존 픽셀 배선(VSS 등)의 각진 직사각형 개구부는 빛의 회절(Diffraction)을 특정 방향으로 집중시켜 카메라 이미지에 강한 플레어(Flare)를 일으킵니다. 이를 해결하기 위해 불투명한 배선 구역의 형태를 원형(Circular)이나 팔각형(Octagonal)으로 깎아 회절 에너지를 전 방향으로 고르게 분산시켰습니다.</li>
-<li><strong>분산 배선(Distributed Routing):</strong> 굵고 투박한 신호 배선을 여러 가닥의 미세한 선(Fine-line)으로 쪼개고 틈새를 주어(Spacing 비율 0.4~2.5) 적외선이 투과할 수 있는 물리적 개구 영역을 극대화했습니다.</li>
-<li>이를 통해 940nm 적외선 대역에서 0차 회절(왜곡 없이 렌즈로 직진하는 빛) 효율을 기존 6.5%에서 약 9%로 끌어올리며, 이미지의 선명도와 신호 대 잡음비(SNR)를 획기적으로 개선했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>UDC 고도화 경쟁 위협:</strong> 스마트폰 전면의 카메라뿐 아니라 Face ID용 적외선(IR) 센서까지 화면 밑으로 넣는 기술(UD IR)은 애플 등 프리미엄 스마트폰 제조사의 핵심 요구사항입니다. Visionox가 광학 필터뿐 아니라 픽셀 내부의 배선 레이아웃 자체를 광학적 관점에서 튜닝하여 투과율을 극대화하는 수준에 이르렀다는 것은 위협적입니다.</li>
-<li><strong>자사 UPC 배선 광학 설계 강화 필요:</strong> 삼성디스플레이 역시 향후 지문/얼굴 인식 센서가 패널 밑으로 들어가는 대면적 통합 UPC를 대비하여, 단순히 구멍을 뚫는 것을 넘어 배선 형태(원형/격자 등)가 일으키는 회절 현상을 최소화하는 회로-광학 융합 설계 특허 및 공정 개발을 더욱 고도화해야 합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 91-3</h2>
+        <button onclick="copyThis('content-91-3')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-91-3" style="margin-top: 15px;">
+            <h1>91-3.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Drive Circuit and Optical Co-Design for High-Performance Under-Display Infrared Recognition</p><h3>2. ???Miao Chang, Lifang Wang, Xingxing Yang, Hongsen Zhang, Qinggang Liu</h3><h3>3. ?뚯냽</h3><p>Hefei Govisionox Technology Co., Ltd. (Visionox?셲 Affiliated Company), Hefei, Anhui, China</p><p>Visionox Technology Inc., Kunshan, Jiangsu, China</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 Visionox?먯꽌 ?붾㈃ 諛??곸쇅??IR) ?쇨뎬 ?몄떇 諛??쒖뒪泥??쇱떛(UD IR)???몄떇瑜좎쓣 ?믪씠湲??꾪빐, ?붿뒪?뚮젅??援щ룞 ?뚮줈? 愿묓븰???뚯쫰 ?ㅺ퀎瑜??숈떆??理쒖쟻?뷀븯??**怨듬룞 ?ㅺ퀎(Co-design) 諛⑹븞**??諛쒗몴???쇰Ц?낅땲??</li><li>**?뺥깭 理쒖쟻??** 湲곗〈 ?쎌? 諛곗꽑(VSS ????媛곸쭊 吏곸궗媛곹삎 媛쒓뎄遺??鍮쏆쓽 ?뚯젅(Diffraction)???뱀젙 諛⑺뼢?쇰줈 吏묒쨷?쒖폒 移대찓???대?吏??媛뺥븳 ?뚮젅??Flare)瑜??쇱쑝?듬땲?? ?대? ?닿껐?섍린 ?꾪빐 遺덊닾紐낇븳 諛곗꽑 援ъ뿭???뺥깭瑜??먰삎(Circular)?대굹 ?붽컖??Octagonal)?쇰줈 源롮븘 ?뚯젅 ?먮꼫吏瑜???諛⑺뼢?쇰줈 怨좊Ⅴ寃?遺꾩궛?쒖섟?듬땲??</li><li>**遺꾩궛 諛곗꽑(Distributed Routing):** 援듦퀬 ?щ컯???좏샇 諛곗꽑???щ윭 媛?μ쓽 誘몄꽭????Fine-line)?쇰줈 履쇨컻怨??덉깉瑜?二쇱뼱(Spacing 鍮꾩쑉 0.4~2.5) ?곸쇅?좎씠 ?ш낵?????덈뒗 臾쇰━??媛쒓뎄 ?곸뿭??洹밸??뷀뻽?듬땲??</li><li>?대? ?듯빐 940nm ?곸쇅?????뿉??0李??뚯젅(?쒓끝 ?놁씠 ?뚯쫰濡?吏곸쭊?섎뒗 鍮? ?⑥쑉??湲곗〈 6.5%?먯꽌 ??9%濡??뚯뼱?щ━硫? ?대?吏???좊챸?꾩? ?좏샇 ? ?≪쓬鍮?SNR)瑜??띻린?곸쑝濡?媛쒖꽑?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**UDC 怨좊룄??寃쎌웳 ?꾪삊:** ?ㅻ쭏?명룿 ?꾨㈃??移대찓?쇰퓧 ?꾨땲??Face ID???곸쇅??IR) ?쇱꽌源뚯? ?붾㈃ 諛묒쑝濡??ｋ뒗 湲곗닠(UD IR)? ?좏뵆 ???꾨━誘몄뾼 ?ㅻ쭏?명룿 ?쒖“?ъ쓽 ?듭떖 ?붽뎄?ы빆?낅땲?? Visionox媛 愿묓븰 ?꾪꽣肉??꾨땲???쎌? ?대???諛곗꽑 ?덉씠?꾩썐 ?먯껜瑜?愿묓븰??愿?먯뿉???쒕떇?섏뿬 ?ш낵?⑥쓣 洹밸??뷀븯???섏????대Ⅴ??ㅻ뒗 寃껋? ?꾪삊?곸엯?덈떎.</li><li>**?먯궗 UPC 諛곗꽑 愿묓븰 ?ㅺ퀎 媛뺥솕 ?꾩슂:** ?쇱꽦?붿뒪?뚮젅????떆 ?ν썑 吏臾??쇨뎬 ?몄떇 ?쇱꽌媛 ?⑤꼸 諛묒쑝濡??ㅼ뼱媛???硫댁쟻 ?듯빀 UPC瑜??鍮꾪븯?? ?⑥닚??援щ찉???ル뒗 寃껋쓣 ?섏뼱 諛곗꽑 ?뺥깭(?먰삎/寃⑹옄 ??媛 ?쇱쑝?ㅻ뒗 ?뚯젅 ?꾩긽??理쒖냼?뷀븯???뚮줈-愿묓븰 ?듯빀 ?ㅺ퀎 ?뱁뿀 諛?怨듭젙 媛쒕컻???붿슧 怨좊룄?뷀빐???⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-91-4">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>91-4</h2>
-                <button class="btn btn-copy" onclick="copyText('content-91-4')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-91-4">
-                <h1>91-4.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>High Transmittance OLED for Under Display Face Recognition</p>
-<h3>2. 저자</h3>
-<p>Chuan xiang Xu, Qi Yao, Hao Wu, Binbin Tong, Xiaohu Li, Shi Shu, Xinhua Liu, Shuilang Dong, Keyi Zhang, Fengjie Zhang</p>
-<h3>3. 소속</h3>
-<p>BOE Technology Group Co., LTD., Beijing, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 1위 패널사 BOE가 노치나 펀치홀을 완전히 없애기 위해 화면 밑 얼굴 인식(UDFR, Under-Display Face Recognition) 전용으로 적외선(IR) 투과율을 비약적으로 끌어올린 고투과율 OLED 기술을 공개했습니다.</li>
-<li><strong>픽셀 회로의 근본적 혁신:</strong> 적외선(IR) 빛은 기존 LTPS TFT의 소자 특성(누설 전류 및 문턱 전압 이동)을 망가뜨리기 때문에 빛 차단막이 필수적이라 투과율이 낮았습니다. 연구진은 구동 TFT 단 하나만 LTPS로 남기고 나머지 스위칭 TFT들을 모두 IR에 반응하지 않는 산화물(MOS) 소자로 교체하여 차단막을 걷어냈습니다.</li>
-<li><strong>배선 및 광학 층 최적화:</strong> 빛이 통과하는 영역의 불투명한 금속 배선을 90% 이상 투명한 ITO로 교체하고, 원형 편광판 대신 맞춤형 COE(Color Filter On Encapsulation) 층을 적용하여 외부 빛 반사를 잡았습니다. 또한 음극(Cathode) 패터닝 공정을 결합했습니다.</li>
-<li><strong>결과:</strong> 6.0인치 FHD 프로토타입 디스플레이에서 IR 센서 구역의 적외선 투과율을 무려 <strong>29.64%</strong>까지 끌어올리는 데 성공했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>디스플레이 풀스크린 생태계 위협:</strong> 애플 '다이내믹 아일랜드'를 대체할 차세대 기술로 꼽히는 화면 밑 Face ID 센서 부문에서, BOE가 투명 배선(ITO) 전환은 물론 픽셀 소자(MOS 100% 활용) 레벨까지 손보며 적외선 투과율 30% 벽을 돌파했다는 것은 막강한 기술적 진보입니다.</li>
-<li><strong>선제적 특허 검토 및 우위 확보 시급:</strong> 폴리이미드 및 UPC 기술에서 세계 최고 수준인 삼성디스플레이지만, 센서 응답을 위한 IR 투과율 확대에 있어 LTPS-MOS 전환 픽셀이나 음극 패터닝 기법을 통한 투과율 향상 기술을 BOE가 선점할 우려가 있으므로 즉각적인 우회 기술 및 성능 벤치마킹이 필수적입니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 91-4</h2>
+        <button onclick="copyThis('content-91-4')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-91-4" style="margin-top: 15px;">
+            <h1>91-4.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>High Transmittance OLED for Under Display Face Recognition</p><h3>2. ???Chuan xiang Xu, Qi Yao, Hao Wu, Binbin Tong, Xiaohu Li, Shi Shu, Xinhua Liu, Shuilang Dong, Keyi Zhang, Fengjie Zhang</h3><h3>3. ?뚯냽</h3><p>BOE Technology Group Co., LTD., Beijing, China</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 1???⑤꼸??BOE媛 ?몄튂???移섑????꾩쟾???놁븷湲??꾪빐 ?붾㈃ 諛??쇨뎬 ?몄떇(UDFR, Under-Display Face Recognition) ?꾩슜?쇰줈 ?곸쇅??IR) ?ш낵?⑥쓣 鍮꾩빟?곸쑝濡??뚯뼱?щ┛ 怨좏닾怨쇱쑉 OLED 湲곗닠??怨듦컻?덉뒿?덈떎.</li><li>**?쎌? ?뚮줈??洹쇰낯???곸떊:** ?곸쇅??IR) 鍮쏆? 湲곗〈 LTPS TFT???뚯옄 ?뱀꽦(?꾩꽕 ?꾨쪟 諛?臾명꽦 ?꾩븬 ?대룞)??留앷??⑤━湲??뚮Ц??鍮?李⑤떒留됱씠 ?꾩닔?곸씠???ш낵?⑥씠 ??븯?듬땲?? ?곌뎄吏꾩? 援щ룞 TFT ???섎굹留?LTPS濡??④린怨??섎㉧吏 ?ㅼ쐞移?TFT?ㅼ쓣 紐⑤몢 IR??諛섏쓳?섏? ?딅뒗 ?고솕臾?MOS) ?뚯옄濡?援먯껜?섏뿬 李⑤떒留됱쓣 嫄룹뼱?덉뒿?덈떎.</li><li>**諛곗꽑 諛?愿묓븰 痢?理쒖쟻??** 鍮쏆씠 ?듦낵?섎뒗 ?곸뿭??遺덊닾紐낇븳 湲덉냽 諛곗꽑??90% ?댁긽 ?щ챸??ITO濡?援먯껜?섍퀬, ?먰삎 ?멸킅?????留욎땄??COE(Color Filter On Encapsulation) 痢듭쓣 ?곸슜?섏뿬 ?몃? 鍮?諛섏궗瑜??≪븯?듬땲?? ?먰븳 ?뚭레(Cathode) ?⑦꽣??怨듭젙??寃고빀?덉뒿?덈떎.</li><li>**寃곌낵:** 6.0?몄튂 FHD ?꾨줈?좏????붿뒪?뚮젅?댁뿉??IR ?쇱꽌 援ъ뿭???곸쇅???ш낵?⑥쓣 臾대젮 **29.64%**源뚯? ?뚯뼱?щ━?????깃났?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?붿뒪?뚮젅????ㅽ겕由??앺깭怨??꾪삊:** ?좏뵆 '?ㅼ씠?대? ?꾩씪?쒕뱶'瑜??泥댄븷 李⑥꽭? 湲곗닠濡?瑗쏀엳???붾㈃ 諛?Face ID ?쇱꽌 遺臾몄뿉?? BOE媛 ?щ챸 諛곗꽑(ITO) ?꾪솚? 臾쇰줎 ?쎌? ?뚯옄(MOS 100% ?쒖슜) ?덈꺼源뚯? ?먮낫硫??곸쇅???ш낵??30% 踰쎌쓣 ?뚰뙆?덈떎??寃껋? 留됯컯??湲곗닠??吏꾨낫?낅땲??</li><li>**?좎젣???뱁뿀 寃??諛??곗쐞 ?뺣낫 ?쒓툒:** ?대━?대???諛?UPC 湲곗닠?먯꽌 ?멸퀎 理쒓퀬 ?섏????쇱꽦?붿뒪?뚮젅?댁?留? ?쇱꽌 ?묐떟???꾪븳 IR ?ш낵???뺣????덉뼱 LTPS-MOS ?꾪솚 ?쎌??대굹 ?뚭레 ?⑦꽣??湲곕쾿???듯븳 ?ш낵???μ긽 湲곗닠??BOE媛 ?좎젏???곕젮媛 ?덉쑝誘濡?利됯컖?곸씤 ?고쉶 湲곗닠 諛??깅뒫 踰ㅼ튂留덊궧???꾩닔?곸엯?덈떎.</li>
         </div>
-    </section>    <section class="paper-section" id="section-98-1">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>98-1</h2>
-                <button class="btn btn-copy" onclick="copyText('content-98-1')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-98-1">
-                <h1>98-1.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>Real In-cell Integrated Touch Sensor for Flexible OLED Display</p>
-<h3>2. 저자</h3>
-<p>Lihua Wang, Xianqing Yang, Junhui Lou, Xiaolong Ji, Haijing Shen, Yunfei Bai, Jiachuan Liu, Lingxiao Du, Haifeng Lu, Rubo Xing, Xiujian Zhu</p>
-<h3>3. 소속</h3>
-<p>Visionox Technology Inc., Kunshan City, Jiangsu Province, China</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>중국 Visionox에서 플렉시블 OLED 패널의 두께를 한계까지 줄이고 원가를 절감하기 위해, 터치 센서를 박막 봉지(TFE) 층 내부에 직접 융합하는 <strong>'리얼 인셀(Real In-cell) 터치 센서'</strong> 구조를 세계 최초로 제안하고 시연한 연구입니다.</li>
-<li><strong>기술의 한계 극복:</strong> 기존처럼 OLED 음극(Cathode) 바로 위에 터치를 넣으면 음극이 전기장을 차단해 터치가 먹히지 않거나 기생 용량이 커집니다.</li>
-<li><strong>혁신적 격벽 구조 (Undercut Isolation):</strong> 연구진은 OLED 화소 사이의 틈에 역테이퍼 형태의 '언더컷(Undercut) 절연 격벽'을 세웠습니다. 그 후 음극(Cathode)을 덮으면 언더컷 구조 때문에 음극이 물리적으로 위아래로 끊어지게 됩니다. 픽셀 부위의 음극은 본래의 디스플레이용으로 쓰고, 언더컷 구조 위에 떠 있는 음극 조각들을 터치 전극으로 재활용하는 천재적인 발상입니다.</li>
-<li><strong>결과:</strong> 1.43인치 스마트워치용 프로토타입 제작 결과, 추가적인 마스크 공정을 단 1번만 쓰고도 120Hz의 빠른 응답 속도와 35dB 이상의 매우 우수한 터치 민감도를 확보하면서 모듈 두께를 극적으로 얇게 만들었습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>Y-OCTA를 위협할 초저가·초박형 터치 기술:</strong> 삼성디스플레이의 핵심 경쟁력인 TFE 위 터치 형성 기술(Y-OCTA, On-cell)보다 마스크 공정을 획기적으로 줄이고 두께를 얇게 가져갈 수 있는 구조입니다. 음극을 패터닝해 터치로 쓴다는 아이디어는 원가 절감 면에서 파괴력이 높습니다.</li>
-<li><strong>격벽 구조를 활용한 픽셀 공정 벤치마킹 필수:</strong> 언더컷 격벽을 이용한 음극의 자동 패터닝 기법은 공정이 단순하지만 불량률(단선, 누설 전류 등) 관리가 핵심입니다. Visionox가 이 기술의 상용화 수율을 확보할 경우 스마트워치 및 모바일 패널 원가 싸움에서 위협이 되므로, 자사의 차세대 인셀 터치 로드맵에 대한 점검과 방어 특허 분석이 필요합니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 98-1</h2>
+        <button onclick="copyThis('content-98-1')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-98-1" style="margin-top: 15px;">
+            <h1>98-1.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>Real In-cell Integrated Touch Sensor for Flexible OLED Display</p><h3>2. ???Lihua Wang, Xianqing Yang, Junhui Lou, Xiaolong Ji, Haijing Shen, Yunfei Bai, Jiachuan Liu, Lingxiao Du, Haifeng Lu, Rubo Xing, Xiujian Zhu</h3><h3>3. ?뚯냽</h3><p>Visionox Technology Inc., Kunshan City, Jiangsu Province, China</p><h3>4. 二쇱슂?댁슜</h3><li>以묎뎅 Visionox?먯꽌 ?뚮젆?쒕툝 OLED ?⑤꼸???먭퍡瑜??쒓퀎源뚯? 以꾩씠怨??먭?瑜??덇컧?섍린 ?꾪빐, ?곗튂 ?쇱꽌瑜?諛뺣쭑 遊됱?(TFE) 痢??대???吏곸젒 ?듯빀?섎뒗 **'由ъ뼹 ?몄?(Real In-cell) ?곗튂 ?쇱꽌'** 援ъ“瑜??멸퀎 理쒖큹濡??쒖븞?섍퀬 ?쒖뿰???곌뎄?낅땲??</li><li>**湲곗닠???쒓퀎 洹밸났:** 湲곗〈泥섎읆 OLED ?뚭레(Cathode) 諛붾줈 ?꾩뿉 ?곗튂瑜??ｌ쑝硫??뚭레???꾧린?μ쓣 李⑤떒???곗튂媛 癒뱁엳吏 ?딄굅??湲곗깮 ?⑸웾??而ㅼ쭛?덈떎.</li><li>**?곸떊??寃⑸꼍 援ъ“ (Undercut Isolation):** ?곌뎄吏꾩? OLED ?붿냼 ?ъ씠???덉뿉 ??뀒?댄띁 ?뺥깭??'?몃뜑而?Undercut) ?덉뿰 寃⑸꼍'???몄썱?듬땲?? 洹????뚭레(Cathode)????쑝硫??몃뜑而?援ъ“ ?뚮Ц???뚭레??臾쇰━?곸쑝濡??꾩븘?섎줈 ?딆뼱吏寃??⑸땲?? ?쎌? 遺?꾩쓽 ?뚭레? 蹂몃옒???붿뒪?뚮젅?댁슜?쇰줈 ?곌퀬, ?몃뜑而?援ъ“ ?꾩뿉 ???덈뒗 ?뚭레 議곌컖?ㅼ쓣 ?곗튂 ?꾧레?쇰줈 ?ы솢?⑺븯??泥쒖옱?곸씤 諛쒖긽?낅땲??</li><li>**寃곌낵:** 1.43?몄튂 ?ㅻ쭏?몄썙移섏슜 ?꾨줈?좏????쒖옉 寃곌낵, 異붽??곸씤 留덉뒪??怨듭젙????1踰덈쭔 ?곌퀬??120Hz??鍮좊Ⅸ ?묐떟 ?띾룄? 35dB ?댁긽??留ㅼ슦 ?곗닔???곗튂 誘쇨컧?꾨? ?뺣낫?섎㈃??紐⑤뱢 ?먭퍡瑜?洹뱀쟻?쇰줈 ?뉕쾶 留뚮뱾?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**Y-OCTA瑜??꾪삊??珥덉?媛쨌珥덈컯???곗튂 湲곗닠:** ?쇱꽦?붿뒪?뚮젅?댁쓽 ?듭떖 寃쎌웳?μ씤 TFE ???곗튂 ?뺤꽦 湲곗닠(Y-OCTA, On-cell)蹂대떎 留덉뒪??怨듭젙???띻린?곸쑝濡?以꾩씠怨??먭퍡瑜??뉕쾶 媛?멸컝 ???덈뒗 援ъ“?낅땲?? ?뚭레???⑦꽣?앺빐 ?곗튂濡??대떎???꾩씠?붿뼱???먭? ?덇컧 硫댁뿉???뚭눼?μ씠 ?믪뒿?덈떎.</li><li>**寃⑸꼍 援ъ“瑜??쒖슜???쎌? 怨듭젙 踰ㅼ튂留덊궧 ?꾩닔:** ?몃뜑而?寃⑸꼍???댁슜???뚭레???먮룞 ?⑦꽣??湲곕쾿? 怨듭젙???⑥닚?섏?留?遺덈웾瑜??⑥꽑, ?꾩꽕 ?꾨쪟 ?? 愿由ш? ?듭떖?낅땲?? Visionox媛 ??湲곗닠???곸슜???섏쑉???뺣낫??寃쎌슦 ?ㅻ쭏?몄썙移?諛?紐⑤컮???⑤꼸 ?먭? ?몄??먯꽌 ?꾪삊???섎?濡? ?먯궗??李⑥꽭? ?몄? ?곗튂 濡쒕뱶留듭뿉 ????먭?怨?諛⑹뼱 ?뱁뿀 遺꾩꽍???꾩슂?⑸땲??</li>
         </div>
-    </section>    <section class="paper-section" id="section-98-2">
-        <div class="paper-card">
-            <div class="card-header">
-                <h2>98-2</h2>
-                <button class="btn btn-copy" onclick="copyText('content-98-2')">
-                    <i data-lucide="copy"></i> PPT??蹂듭궗
-                </button>
-            </div>
-            <div class="card-content prose" id="content-98-2">
-                <h1>98-2.pdf 요약</h1>
-<h3>1. 제목</h3>
-<p>TDDI-Based Charge-Sensing for Aftermarket Defect-Detection in OLED Pixel Circuit with Internal Charging Process</p>
-<h3>2. 저자</h3>
-<p>Chien-Ju Lai, En Tsung, Hsin-Yuan Chang, Ya-Hsiang Tai, Hua-Wei Liu, Chih-Chang Lai, Chun-Yi Chou</p>
-<h3>3. 소속</h3>
-<p>National Yang Ming Chiao Tung University, Hsinchu, Taiwan</p>
-<p>Novatek Microelectronics Corp., Hsinchu County, Taiwan</p>
-<h3>4. 주요내용</h3>
-<ul>
-<li>대만의 구동 칩 팹리스 Novatek과 연구진이 OLED 디스플레이의 터치 및 디스플레이 통합 구동 칩(TDDI)을 활용해, 패널 제조 완료 후나 소비자 사용 중(Aftermarket)에도 외부 장비 없이 픽셀 회로의 결함을 스스로 진단하는 기법을 개발했습니다.</li>
-<li><strong>자가 진단(Self-diagnostic) 원리:</strong> 외부 탐침(Probe) 장비를 쓰지 않고, 픽셀을 구동하는 TDDI 칩이 자체적인 구동 신호(Vini, Vobs 등)를 활용하여 픽셀 내부의 저장 커패시터(Cst)에 특정한 전압을 충전시킵니다. 이후 방전되는 전하량을 TDDI 내부에 있는 아날로그 프론트엔드(AFE) 적분기를 통해 읽어들입니다.</li>
-<li><strong>결함 식별:</strong> 픽셀 회로에 단선(Open)이나 단락(Short) 같은 결함이 생기면 이 커패시터의 충·방전 전압의 극성이나 출력 파형이 정상 픽셀과 확실하게 다르게 나타납니다.</li>
-<li>복잡한 8T1C 기반의 LTPO 픽셀 회로 시뮬레이션을 통해 다양한 결함 사례를 뚜렷하게 식별해 낼 수 있음을 입증했습니다.</li>
-</ul>
-<h3>5. 시사점 (삼성디스플레이에 위협이 되나 또는 검토 필요한가?)</h3>
-<ul>
-<li><strong>세트사의 불량 분석 및 유지보수 혁신:</strong> 스마트폰이나 자동차 전장용 디스플레이가 점점 복잡해지고 고가화되면서, 기기 출하 후 발생하는 픽셀의 전기적 결함(열화, 단락 등)을 뜯어보지 않고 내부 칩셋이 스스로 감지하고 진단하는 기술은 세트사(고객사)에게 엄청난 가치를 제공합니다.</li>
-<li><strong>스마트 구동 IC 기술로서 벤치마킹 필요:</strong> 대만 구동 IC 설계 업계의 스마트 진단 기술로서 패널의 신뢰성 및 불량 해석 효율을 극대화할 수 있는 솔루션입니다. 삼성디스플레이 역시 패널 회로 설계 부서 및 자회사(LSI)와 협업하여 이러한 자체 결함 모니터링/진단 기능을 TDDI나 DDI에 탑재하는 것을 검토해볼 필요가 있습니다.</li>
-</ul>
-            </div>
+    </div>    <div style="border: 1px solid #ccc; padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px;">
+        <h2 style="color: #333;">Paper 98-2</h2>
+        <button onclick="copyThis('content-98-2')" style="padding: 10px; background: #007bff; color: #fff; border: none; cursor: pointer;">PPT 蹂듭궗</button>
+        <div id="content-98-2" style="margin-top: 15px;">
+            <h1>98-2.pdf ?붿빟</h1><h3>1. ?쒕ぉ</h3><p>TDDI-Based Charge-Sensing for Aftermarket Defect-Detection in OLED Pixel Circuit with Internal Charging Process</p><h3>2. ???Chien-Ju Lai, En Tsung, Hsin-Yuan Chang, Ya-Hsiang Tai, Hua-Wei Liu, Chih-Chang Lai, Chun-Yi Chou</h3><h3>3. ?뚯냽</h3><p>National Yang Ming Chiao Tung University, Hsinchu, Taiwan</p><p>Novatek Microelectronics Corp., Hsinchu County, Taiwan</p><h3>4. 二쇱슂?댁슜</h3><li>?留뚯쓽 援щ룞 移??밸━??Novatek怨??곌뎄吏꾩씠 OLED ?붿뒪?뚮젅?댁쓽 ?곗튂 諛??붿뒪?뚮젅???듯빀 援щ룞 移?TDDI)???쒖슜?? ?⑤꼸 ?쒖“ ?꾨즺 ?꾨굹 ?뚮퉬???ъ슜 以?Aftermarket)?먮룄 ?몃? ?λ퉬 ?놁씠 ?쎌? ?뚮줈??寃고븿???ㅼ뒪濡?吏꾨떒?섎뒗 湲곕쾿??媛쒕컻?덉뒿?덈떎.</li><li>**?먭? 吏꾨떒(Self-diagnostic) ?먮━:** ?몃? ?먯묠(Probe) ?λ퉬瑜??곗? ?딄퀬, ?쎌???援щ룞?섎뒗 TDDI 移⑹씠 ?먯껜?곸씤 援щ룞 ?좏샇(Vini, Vobs ??瑜??쒖슜?섏뿬 ?쎌? ?대??????而ㅽ뙣?쒗꽣(Cst)???뱀젙???꾩븬??異⑹쟾?쒗궢?덈떎. ?댄썑 諛⑹쟾?섎뒗 ?꾪븯?됱쓣 TDDI ?대????덈뒗 ?꾨궇濡쒓렇 ?꾨줎?몄뿏??AFE) ?곷텇湲곕? ?듯빐 ?쎌뼱?ㅼ엯?덈떎.</li><li>**寃고븿 ?앸퀎:** ?쎌? ?뚮줈???⑥꽑(Open)?대굹 ?⑤씫(Short) 媛숈? 寃고븿???앷린硫???而ㅽ뙣?쒗꽣??異㈑룸갑???꾩븬??洹뱀꽦?대굹 異쒕젰 ?뚰삎???뺤긽 ?쎌?怨??뺤떎?섍쾶 ?ㅻⅤ寃??섑??⑸땲??</li><li>蹂듭옟??8T1C 湲곕컲??LTPO ?쎌? ?뚮줈 ?쒕??덉씠?섏쓣 ?듯빐 ?ㅼ뼇??寃고븿 ?щ?瑜??쒕졆?섍쾶 ?앸퀎???????덉쓬???낆쬆?덉뒿?덈떎.</li><h3>5. ?쒖궗??(?쇱꽦?붿뒪?뚮젅?댁뿉 ?꾪삊???섎굹 ?먮뒗 寃???꾩슂?쒓??)</h3><li>**?명듃?ъ쓽 遺덈웾 遺꾩꽍 諛??좎?蹂댁닔 ?곸떊:** ?ㅻ쭏?명룿?대굹 ?먮룞李??꾩옣???붿뒪?뚮젅?닿? ?먯젏 蹂듭옟?댁?怨?怨좉??붾릺硫댁꽌, 湲곌린 異쒗븯 ??諛쒖깮?섎뒗 ?쎌????꾧린??寃고븿(?댄솕, ?⑤씫 ??????뼱蹂댁? ?딄퀬 ?대? 移⑹뀑???ㅼ뒪濡?媛먯??섍퀬 吏꾨떒?섎뒗 湲곗닠? ?명듃??怨좉컼???먭쾶 ?꾩껌??媛移섎? ?쒓났?⑸땲??</li><li>**?ㅻ쭏??援щ룞 IC 湲곗닠濡쒖꽌 踰ㅼ튂留덊궧 ?꾩슂:** ?留?援щ룞 IC ?ㅺ퀎 ?낃퀎???ㅻ쭏??吏꾨떒 湲곗닠濡쒖꽌 ?⑤꼸???좊ː??諛?遺덈웾 ?댁꽍 ?⑥쑉??洹밸??뷀븷 ???덈뒗 ?붾（?섏엯?덈떎. ?쇱꽦?붿뒪?뚮젅????떆 ?⑤꼸 ?뚮줈 ?ㅺ퀎 遺??諛??먰쉶??LSI)? ?묒뾽?섏뿬 ?대윭???먯껜 寃고븿 紐⑤땲?곕쭅/吏꾨떒 湲곕뒫??TDDI??DDI???묒옱?섎뒗 寃껋쓣 寃?좏빐蹂??꾩슂媛 ?덉뒿?덈떎.</li>
         </div>
-    </section>
-    </main>
-    <div id="toast">蹂듭궗?섏뿀?듬땲??</div>
+    </div>
     <script>
-        function copyText(id) {
+        function copyThis(id) {
             const el = document.getElementById(id);
-            // Cleaner formatting for PPT
             const text = el.innerText.trim();
-            navigator.clipboard.writeText(text).then(() => {
-                const t = document.getElementById('toast');
-                t.style.display = 'block';
-                setTimeout(() => t.style.display = 'none', 2000);
-            });
+            const temp = document.createElement('textarea');
+            temp.value = text;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            alert('蹂듭궗?섏뿀?듬땲??');
         }
-        lucide.createIcons();
     </script>
 </body>
 </html>
